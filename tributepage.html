@@ -7,8 +7,8 @@
     <body>
         <div id="main">
           <div id="title">
-            <h1>Todd Howard</h1>
-            <p>It Just Works!</p>
+            <h1>It just works!</h1>
+            <!--<p>It Just Works!</p>-->
             <a id="top"></a>
           </div>
           <div id="img-div">
@@ -21,12 +21,12 @@
           <section id="tribute-info">
             <div class="quote">
               <p>
-                <q>(Todd) I am gonna make video games and everyone's gonna play them!  (bullies) You dork! Go back to the Chess club. (Todd)Who's laughing now! Yes, I was in the chess club. </q><span> -Todd Howard</span>
+                <q>(Todd) I am gonna make video games and everyone's gonna play them!  (bullies) You dork! Go back to the Chess club. (Todd)Who's laughing now! Yes, I was in the chess club. </q> -Todd Howard
               </p>
             </div>
               <div class="timeline">
-                <h2>Todd Howard AKA God Howard</h2>
-                <h3>A brief history</h3>
+                <h1>Todd Howard AKA God Howard</h1>
+                <h2>A brief history</h2>
                 <ul>
                   <li>Date of Birth :  April 25, 1971</li>
                   <li>After obtaining Wayne Gretzky Hockey (1988), during the holiday break of his senior year in college, Howard visited the offices of the game's developer, Bethesda Softworks, which he passed by daily on his commute to and from school. He asked for a job at the company but was rejected and told that he needed to finish school as a prerequisite. After graduating, he went back to Bethesda for a job but was rejected again due to a lack of job opportunities at the time.</li>
@@ -39,12 +39,40 @@
                  </div>
                 </div>
 
-                <h3>Life in Bethesda Game Studios</h3>
+                <h2>Life in Bethesda Game Studios</h2>
                 <ul>
                   <li>Howard was eventually recruited by Bethesda Softworks in 1994, originally as a producer. His first game development credit for Bethesda was as producer and designer of The Terminator: Future Shock (1995), followed by work as a designer on SkyNET and The Elder Scrolls II: Daggerfall, both released in 1996. He was project leader for the first time on The Elder Scrolls Adventures: Redguard, released in 1998.</li>
                   <li>In 2000, Howard was appointed project leader and designer for The Elder Scrolls III: Morrowind and the expansions that followed. The game was released in 2002 and was a critical and commercial success, winning several Game of the Year awards. He then led the creation of The Elder Scrolls IV: Oblivion (2006) as its executive producer. After this, he served as game director and executive producer of Fallout 3, released in 2008.</li>
                   <li>Howard returned to The Elder Scrolls series to lead the development as the creative director of its fifth installment, The Elder Scrolls V: Skyrim, which was released in November 2011.[8] He subsequently directed Fallout 4, released in November 2015,[9] and Fallout 76, a multiplayer installment in the series that attracted criticism upon its release in November 2018. Howard will also serve as the executive producer of the upcoming game based on the Indiana Jones series of films, currently in development by MachineGames and Lucasfilm Games.</li>
                   <li>The famous quote, "It just works" happened during Bethesda's e3 showcase where Todd was talking about a feature in fallout 4 that failed and just proceeded with the demo saying "it just works"</li>
+                </ul>
+                <div id="img-div">
+                  <img id="image" src="https://scontent.fcrk3-1.fna.fbcdn.net/v/t1.0-9/10304973_1497999643836559_5677814980422569541_n.jpg?_nc_cat=110&ccb=2&_nc_sid=e3f864&_nc_ohc=zGyCGIyDjJgAX_ZCT9y&_nc_ht=scontent.fcrk3-1.fna&oh=1b474a15b53d0d8312e34a582cf9dc68&oe=602E60CE" alt="It Just Works">
+                 <div id="img-caption">
+                   <p>God Howard</p>
+                 </div>
+                </div>
+                
+                <h2>God Howard's Miracles</h2>
+                <ul>
+                  <li>1995  The Terminator: Future Shock </li>
+                  <li>1996	SkyNET</li>
+                  <li>1996  The Elder Scrolls II: Daggerfall	</li>
+                  <li>1998	The Elder Scrolls Adventures: Redguard</li>
+                  <li>2002	The Elder Scrolls III: Morrowind</li>
+                  <li>2003	The Elder Scrolls III: Bloodmoon</li>
+                  <li>2004	The Elder Scrolls Travels: Shadowkey</li>
+                  <li>2006	The Elder Scrolls IV: Oblivion</li>
+                  <li>2007	The Elder Scrolls IV: Shivering Isles</li>
+                  <li>2008	Fallout 3	</li>
+                  <li>2011	The Elder Scrolls V: Skyrim</li>
+                  <li>2012	The Elder Scrolls V: Skyrim – Dawnguard</li>
+                  <li>2012	The Elder Scrolls V: Skyrim – Hearthfire</li>
+                  <li>2012	The Elder Scrolls V: Skyrim – Dragonborn</li>
+                  <li>2015	Fallout Shelter</li>
+                  <li>2015	Fallout 4</li>
+                  <li>2018	Fallout 76</li>
+                  <li>TBA	Untitled Indiana Jones project</li>
                 </ul>
               </div>
           </section>
@@ -56,9 +84,22 @@
 
             <br>
             <br>
-            <div><a href="https://jarencudilla.github.io">Home</a> || <a href="#top">Top</a></div>
+            <div style="align-self: center; text-align: center;"><a href="https://jarencudilla.github.io">Home</a> || <a href="#top">Top</a></div>
 
           </footer>
         </div>
+
+        <script>
+
+          window.onscroll = function() {scrollFunction()};
+          
+          function scrollFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+              document.getElementById("title").style.opacity = "45%";
+            } else {
+              document.getElementById("title").style.opacity = "100%";
+            }
+          }
+          </script>
       </body>
   </html>
