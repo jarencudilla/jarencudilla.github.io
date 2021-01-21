@@ -13,22 +13,29 @@ body, html  {
   
   #title {
     background: #325886;
+    top: 0px;
     width: 100%;
-    height: auto;
+    height: 100px;
     font-family: 'Helvetica Black';
     text-align: center;
+    margin-top: 0px;
+    margin: 0%;
     color: #FCE8A4;
+    position: fixed;
+    transition: 0.2s; 
+    
   }
   
   #title p {
     font-size: 30px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: #FCE8A4;
   }
   
   #title h1 {
-    font-size: 60px;
+    font-size: 50px;
     letter-spacing: 1px;
+    align-content: center;
   }
   
   h1 {
@@ -47,7 +54,9 @@ body, html  {
   
   #img-div {
     color: #FCE8A4;
-    padding: 20px;
+    margin-top: 60px;
+    margin-bottom: 0px;
+    padding: 30px;
     background: white;
     width: 100%;
     display: flex;
