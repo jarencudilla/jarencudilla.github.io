@@ -17,11 +17,13 @@ body, html  {
     height: auto;
     font-family: 'Helvetica Black';
     text-align: center;
+    color: #FCE8A4;
   }
   
   #title p {
     font-size: 30px;
     letter-spacing: 2px;
+    color: #FCE8A4;
   }
   
   #title h1 {
