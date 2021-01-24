@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>HTML Forms</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="assets/css/styles3.css" >
+        <link href="http://fonts.cdnfonts.com/css/ghost-clan" rel="stylesheet">
+	</head>
+
+	<a id="top"></a>
+    <div id="main">
+        
+          <div id="title">
+			<h1>Xoomvision Gaming</h1>
+			<p>Powerleveling your characters since 2020</p>
+          </div>
+        
+        </div>
+     <div class="fullscreen-bg">
+        <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+          <source src="images/bg.mp4" type="video/mp4">
+        </video>
+     </div>
+
+	 <form id="survey-form" action="registrationresult.html" method="post">
+        <!-- Resizing window sucks and messes my formatting
+        <div id="title">
+			<h1>Xoomvision Gaming</h1>
+			<p>Powerleveling your characters since 2020</p>
+          </div>
+        --> 
+      <div>
+		<!--textboxes-->
+        <label id="name-label" for="name">Ingame name</label><br>
+        <input type="text" required id="name" name="name" placeholder="Enter your ingame name" size="70"><br>
+		<label id="email-label" for="email">Email</label><br>
+		 <input type="email" required id="email-label" name="user_email" placeholder="Enter your Email - for notifications and calendar invite. example@email.com" size="87" ><br> 
+		<label id="number-label" for="number">SHD Level (Optional)</label><br>
+		 <input type="number" id="number" name="number" placeholder="Enter your SHD level (Optional)" size="70" min="1" max="99"><br>
+		 <p>Note: At this point, we only play in the PC as we already have high level characters and an established guild.</p>
+		 <p>We'll definitely establish a guild and level our characters in other platforms (PS4, Xbox One)<br>
+			If you want to be notified when we launch the Guild on other platforms (Please tick the checkbox)</p>
+		 <input type="checkbox" name="notify" id="notify" value="notify" unchecked>
+          <label for="notify" >Hell Yeah!</label><br>
+          <br>	  
+		<label for="role">What would you like to do in while in the team?</label>
+		 <!--dropdown--> 
+		 <select name="role" id="dropdown" placeholder="Select current role">  
+		    <option value="raid" >Raid Carry (Operation:Iron Horse / Operation: Dark hours, Achievement, Exotic Farm)</option>
+		    <option value="farm" >Open World activities (Item farm (Targeted Loot), Control Points, Side missions, Main Mission Carry DC/NY) </option>
+			<option value="summitfarm" >Summit Farming (Exotics, Targeted Loots, Hunter Farm (Level 100 Legendary)</option>
+			<option value="dzfarm" >Dark Zone Farming (Exotics, DZ exclusive items, Landmarks, DZ Rank)</option>
+		  </select>
+		  <p>Note: Targeted Loot/Exotics farming may or may not drop during our team run so it may take multiple runs for the items to drop.<br> (Max Time : 6 hours per game session)</p>
+		 <!--radio--> 
+		<label id="gametime" for="gametime">Preferred Game Time</label><br>
+		  <input type="radio" name="gametime" id="gametimeam" value="am"><label for="gametimeam">Morning 5am-11am</label><br>
+		  <input type="radio" name="gametime" id="gametimepm" value="pm"><label for="gametimepm">Afternoon 1pm-7pm</label><br>
+          <input type="radio" name="gametime" id="gametimeeve" value="eve"><label for="gametimeeve">Evening 9pm-3am</label><br>
+          <br>
+		<!--textbox-->
+        <label for="notes">Notes:</label><br>
+        <p>Any Additional info or notes you would want the team to know before the start of our gaming session</p>
+         <textarea name="notes" id="notes" size="300" placeholder="Additional notes"></textarea><br>
+        <br> 
+        <div id="submit">
+			<button type="submit" id="submit">Submit</button>
+        </div>  
+	 </div>
+	</form>
+	
+<script>
+
+
+</script>
+
+</html>
+
+			
+
+
+
+
+
+
+
+
+		
+
+
