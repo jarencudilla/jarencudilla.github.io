@@ -1,0 +1,115 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'ghost-clan', sans-serif;
+    font-size: 1.2em;
+}
+
+#title h1{
+    font-family: 'Ghost Clan', sans-serif;
+    font-size: 2.5em;
+    text-align: right;
+    align-content: center;
+    padding-right: 190px;
+}
+
+#title p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    text-align: right;
+    align-content: center;
+    padding-right: 180px;
+    word-wrap: break-word;
+}
+
+form {
+    display: flex;
+    align-content: flex-end;
+    text-align: left;
+    justify-items: flex-start;
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+    padding-left: 55%;
+    padding-right: 80px;
+    /* background-color: black;
+    opacity: 45%;
+    border: 1px solid black;
+    border-radius: 1em; */
+}
+
+textarea {
+    width: 80%;
+    padding-right: 80px;
+}
+#dropdown {
+    width: 80%;
+    padding-right: 80px; 
+}
+#name {
+    width: 80%;
+    padding-right: 80px; 
+}
+#number {
+    width: 80%;
+    padding-right: 80px; 
+}
+#user_email {
+    width: 80%;
+    padding-right: 80px;
+}     
+form p {
+    font-size: 0.8em;
+}
+#submit {
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-start;
+}
+
+
+/* fullscreen bg video */
+
+.fullscreen-bg {
+    opacity: 85%;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16:9) {
+    .fullscreen-bg__video {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16:9) {
+    .fullscreen-bg__video {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .fullscreen-bg {
+        background: url('images/bg.mp4') center center / cover no-repeat;
+    }
+    .fullscreen-bg__video {
+        display: none;
+    }
+}
+
