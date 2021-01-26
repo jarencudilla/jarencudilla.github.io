@@ -1,84 +1,151 @@
 body {
+    appearance: none;
+    -ms-progress-appearance: unset;
+    -moz-appearance: unset;
+    -webkit-appearance: unset;
     background-color: black;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-family: 'ghost-clan', sans-serif;
-    font-size: 1.2em;
+    font-size: 1em;
     display: flex;
     flex-direction: column;
     align-items: right;
 }
 
-#title h1{
+#title h1 {
     font-family: 'Ghost Clan', sans-serif;
     font-size: 2.5em;
     text-align: right;
     align-content: right;
     align-items: center;
-    word-wrap: break-word;
-    margin-right: 10%;
+    margin-right: 12%;
     /*
+    word-wrap: break-word;
     padding-right: 190px;
     */
 }
 
-#title p{
+#title h2 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
+    font-size: 1.3em;
     text-align: right;
-    align-content: center;
+    align-content: right;
+    align-items: center;
+    margin-right: 13%;
     /*
-    padding-right: 180px;
-    */
     word-wrap: break-word;
-    margin-right: 10%;
+    padding-right: 190px;
+    */
 }
 
 form {
     display: flex;
-    align-content: flex-end;
+    justify-content: flex-end;
+    align-items: left;
+    font-size: 1em;
     text-align: left;
-    justify-items: flex-start;
-    justify-content: flex-start;
-    width: auto;
-    height: auto;
-    padding-left: 55%;
-    padding-right: 80px;
+    align-items: left;
+    word-wrap: break-word;
+    margin-right: 10%;
+    /* padding-left: 55%;
+    padding-right: 80px; */
     /* background-color: black;
     opacity: 45%;
     border: 1px solid black;
     border-radius: 1em; */
 }
 
-textarea {
-    width: 80%;
-    padding-right: 80px;
+form div {
+    width: 600px;
 }
-#dropdown {
-    width: 80%;
-    padding-right: 80px; 
+
+textarea {
+    width: 100%;
+    padding-right: 10%;
+    resize: horizontal;
+    overflow: initial;
+}
+role {
+    width: 100%;
+    /*padding-right: 10%;*/
+    resize: horizontal;
+    overflow: auto;
+}
+.label1 {
+    font-size: 1em;
+    line-height: 1em;
+    margin-bottom: 0.6em;
+}
+input {
+    margin-top: 0.8%;
+    margin-bottom: 1%;
+}
+.dropdown {
+    padding-bottom: 1%;
+    font-size: 1em;  
 }
 #name {
-    width: 80%;
-    padding-right: 80px; 
+    width: 100%;
+    padding-right: 10%;
+    resize: horizontal;
+    overflow: initial;
 }
+
 #number {
-    width: 80%;
-    padding-right: 80px; 
+    width: 100%;
+    padding-right: 10%;
+    resize: horizontal;
+    overflow: initial;
 }
-#user_email {
-    width: 80%;
-    padding-right: 80px;
+
+#email-label {
+    width: 100%;
+    padding-right: 10%;
+    resize: horizontal;
+    overflow: initial;
 }     
 form p {
-    font-size: 0.8em;
+    font-size: 1em;
+    line-height: 1.2em;
+    word-wrap: break-word;
 }
 #submit {
     display: flex;
     align-self: flex-start;
     justify-content: flex-start;
+    align-content: right;
+    align-items: center;
+}
+/* result page style */
+.result {
+    display: flex;
+    justify-content: flex-end;
+    align-items: left;
+    text-align: left;
+    word-wrap: break-word;
+    margin-right: 10%;
 }
 
+.result h1 {
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    font-size: 2em;  
+}
+.result div {
+    width: 500px;
+    height: 400px;
+    margin-top: 30px;
+}
+
+.result p {
+    font-size: 1.1em;
+    line-height: 1.2em;
+    word-wrap: break-word;
+    margin-top: 20px;
+    margin-left: 28px;
+}
 
 /* fullscreen bg video */
 
