@@ -23,7 +23,7 @@ h1 {
     margin: 0;
     padding: 0;
     position: relative;
-    top: 10%;
+    /* top: 10%;*/
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -39,20 +39,25 @@ h1 {
 .ivory {
     display: flex;
     flex-direction: row;
-    float: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
     width: 12.5%;
     height: 12.5%;
     background-color: ivory;
     text-align: center;
-    font-size: 5vw;
+    font-size: 4vw;
 }
 .olive {
     display: flex;
     flex-direction: row;
-    float: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
     width: 12.5%;
     height: 12.5%;
     background-color: olivedrab;
-    text-align: center;
-    font-size: 5vw;
+    font-size: 4vw;
 }
