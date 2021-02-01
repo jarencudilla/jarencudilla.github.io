@@ -1,0 +1,126 @@
+body {
+  background-color: grey;
+  display: grid;
+  align-self: center;
+/*  height: auto;
+  width: auto; */
+}
+h1 {
+  align-content: center;
+  text-align: center;
+  color: white;
+  font-size: 55px;
+  text-shadow: 2px 2px 4px black;
+}
+a {
+  display: block;
+  align-content: center;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px black;
+}  
+.container {
+  display: grid; 
+  grid-template-columns: repeat(10, 50px) ;
+  grid-template-rows: repeat(10, 50px);
+  grid-gap: 0;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+.board {
+  display: grid; 
+  grid-template-columns: repeat(10, 50px) ;
+  grid-template-rows: repeat(10, 50px);
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  height: fit-content;
+  width: fit-content;
+}
+.ivory {
+  display: grid; 
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  background-color: ivory;
+  font-size: 4vw;
+}
+.ebony {
+  display: grid; 
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  background-color: darkgrey;
+  font-size: 4vw;
+}
+.top {
+  grid-column-start: 2;
+  grid-column-end: 10;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.bottom {
+  grid-column-start: 1;
+  grid-column-end: 10;
+  grid-row-start: 10;
+  grid-row-end: 10;
+}
+.right {
+  grid-column-start: 10;
+  grid-column-end: 10;
+  grid-row-start: 2;
+  grid-row-end: 8;
+}
+.left {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 8;
+}
+.top {
+  display: grid;
+  align-items: stretch;
+  background-color: beige;
+}
+.bottom {
+  display: grid;
+  align-items: stretch;
+  background-color: beige;
+}
+.left {
+  display: grid;
+  align-items: center;
+  align-self: start;
+  background-color: beige;
+}
+.right {
+  display: grid;
+  align-items: center;
+  align-self: end;
+  background-color: beige;
+}
+.outer {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  align-items: stretch;
+}
+.outer-sides {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(10, 50px);
+  grid-auto-flow: column;
+  align-items: stretch;
+}  
+.outer-label {
+  text-align: center;
+  align-self: center;
+}
