@@ -11,4 +11,8 @@ function drop(dropevent) {
     var data = dropevent.dataTransfer.getData("text");
     dropevent.target.appendChild(document.getElementById(data));
 }
+/* to do 
+legal moves
+collision detection
+*/
 
