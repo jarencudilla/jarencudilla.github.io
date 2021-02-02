@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/styles5.css" >
+  <script src="script/script.js"></script>
+  <script>
+    window.onload = function () {
+      allowDrop();
+      drag();
+      drop();
+    }
+  </script>
   <title>Chessboard Grid</title>
 </head>
 <body>
@@ -13,77 +21,78 @@
   
   <div class="container">
         <!--1st row-->
-        <div class="ivory moves"><div class="pieces" draggable="true">&#9820</div></div>
-        <div class="ebony moves"><div class="pieces" draggable="true">&#9822</div></div>
-        <div class="ivory moves"><div class="pieces" draggable="true">&#9821</div></div>
-        <div class="ebony moves"><div class="pieces" draggable="true">&#9819</div></div>
-        <div class="ivory moves"><div class="pieces" draggable="true">&#9818</div></div>
-        <div class="ebony moves"><div class="pieces" draggable="true">&#9821</div></div>
-        <div class="ivory moves"><div class="pieces" draggable="true">&#9822</div></div>
-        <div class="ebony moves"><div class="pieces" draggable="true">&#9820</div></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="a8" draggable="true" ondragstart="drag(event)">&#9820</div></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="b8" draggable="true" ondragstart="drag(event)">&#9822</div></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="c8" draggable="true" ondragstart="drag(event)">&#9821</div></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="d8" draggable="true" ondragstart="drag(event)">&#9819</div></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="e8" draggable="true" ondragstart="drag(event)">&#9818</div></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="f8" draggable="true" ondragstart="drag(event)">&#9821</div></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="g8" draggable="true" ondragstart="drag(event)">&#9822</div></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="h8" draggable="true" ondragstart="drag(event)">&#9820</div></div>
         <!--2nd row-->
-        <div class="ebony moves" ><div class="pieces" draggable="true">&#9823</div></div>
-        <div class="ivory moves" ><div class="pieces" draggable="true">&#9823</div></div>
-        <div class="ebony moves" ><div class="pieces" draggable="true">&#9823</div></div>
-        <div class="ivory moves" ><div class="pieces" draggable="true">&#9823</div></div>
-        <div class="ebony moves" ><div class="pieces" draggable="true">&#9823</div></div>
-        <div class="ivory moves" ><div class="pieces" draggable="true">&#9823</div></div>
-        <div class="ebony moves" ><div class="pieces" draggable="true">&#9823</div></div>
-        <div class="ivory moves" ><div class="pieces" draggable="true">&#9823</div></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="a7" draggable="true" ondragstart="drag(event)">&#9823</div></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="b7" draggable="true" ondragstart="drag(event)">&#9823</div></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="c7" draggable="true" ondragstart="drag(event)">&#9823</div></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="d7" draggable="true" ondragstart="drag(event)">&#9823</div></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="e7" draggable="true" ondragstart="drag(event)">&#9823</div></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="f7" draggable="true" ondragstart="drag(event)">&#9823</div></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="g7" draggable="true" ondragstart="drag(event)">&#9823</div></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="h7" draggable="true" ondragstart="drag(event)">&#9823</div></div>
         <!--3rd row-->
-        <div class="ivory moves"></div>
-        <div class="ebony moves"></div>
-        <div class="ivory moves"></div>
-        <div class="ebony moves"></div>
-        <div class="ivory moves"></div>
-        <div class="ebony moves"></div>
-        <div class="ivory moves"></div>
-        <div class="ebony moves"></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)" id="a6"></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)" id="b6"></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)" id="c6"></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)" id="d6"></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)" id="e6"></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)" id="f6"></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)" id="g6"></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)" id="h6"></div>
         <!--4th row-->
-        <div class="ebony moves"></div>
-        <div class="ivory moves"></div>
-        <div class="ebony moves"></div>
-        <div class="ivory moves"></div>
-        <div class="ebony moves"></div>
-        <div class="ivory moves"></div>
-        <div class="ebony moves"></div>
-        <div class="ivory moves"></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)" id="a5"></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)" id="b5"></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)" id="c5"></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)" id="f5"></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)" id="e5"></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)" id="f5"></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)" id="g5"></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)" id="h5"></div>
         <!--5th row-->
-        <div class="ivory moves"></div>
-        <div class="ebony moves"></div>
-        <div class="ivory moves"></div>
-        <div class="ebony moves"></div>
-        <div class="ivory moves"></div>
-        <div class="ebony moves"></div>
-        <div class="ivory moves"></div>
-        <div class="ebony moves"></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)" id="a4"></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)" id="b4"></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)" id="c4"></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)" id="d4"></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)" id="e4"></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)" id="f4"></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)" id="g4"></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)" id="h4"></div>
         <!--6th row-->
-        <div class="ebony moves"></div>
-        <div class="ivory moves"></div>
-        <div class="ebony moves"></div>
-        <div class="ivory moves"></div>
-        <div class="ebony moves"></div>
-        <div class="ivory moves"></div>
-        <div class="ebony moves"></div>
-        <div class="ivory moves"></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)" id="a3"></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)" id="b3"></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)" id="c3"></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)" id="d3"></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)" id="e3"></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)" id="f3"></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)" id="g3"></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)" id="h3"></div>
         <!--7th row-->
-        <div class="ivory moves"><div class="pieces" draggable="true">&#9817</div></div>
-        <div class="ebony moves"><div class="pieces" draggable="true">&#9817</div></div>
-        <div class="ivory moves"><div class="pieces" draggable="true">&#9817</div></div>
-        <div class="ebony moves"><div class="pieces" draggable="true">&#9817</div></div>
-        <div class="ivory moves"><div class="pieces" draggable="true">&#9817</div></div>
-        <div class="ebony moves"><div class="pieces" draggable="true">&#9817</div></div>
-        <div class="ivory moves"><div class="pieces" draggable="true">&#9817</div></div>
-        <div class="ebony moves"><div class="pieces" draggable="true">&#9817</div></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="a2" draggable="true" ondragstart="drag(event)">&#9817</div></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="b2" draggable="true" ondragstart="drag(event)">&#9817</div></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="c2" draggable="true" ondragstart="drag(event)">&#9817</div></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="d2" draggable="true" ondragstart="drag(event)">&#9817</div></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="e2" draggable="true" ondragstart="drag(event)">&#9817</div></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="f2" draggable="true" ondragstart="drag(event)">&#9817</div></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="g2" draggable="true" ondragstart="drag(event)">&#9817</div></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="h2" draggable="true" ondragstart="drag(event)">&#9817</div></div>
         <!--8th row-->
-        <div class="ebony moves"><div class="pieces" draggable="true">&#9814</div></div>
-        <div class="ivory moves"><div class="pieces" draggable="true">&#9816</div></div>
-        <div class="ebony moves"><div class="pieces" draggable="true">&#9815</div></div>
-        <div class="ivory moves"><div class="pieces" draggable="true">&#9813</div></div>
-        <div class="ebony moves"><div class="pieces" draggable="true">&#9812</div></div>
-        <div class="ivory moves"><div class="pieces" draggable="true">&#9815</div></div>
-        <div class="ebony moves"><div class="pieces" draggable="true">&#9816</div></div>
-        <div class="ivory moves"><div class="pieces" draggable="true">&#9814</div></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="a1" draggable="true" ondragstart="drag(event)">&#9814</div></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="b1" draggable="true" ondragstart="drag(event)">&#9816</div></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="c1" draggable="true" ondragstart="drag(event)">&#9815</div></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="d1" draggable="true" ondragstart="drag(event)">&#9813</div></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="e1" draggable="true" ondragstart="drag(event)">&#9812</div></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="f1" draggable="true" ondragstart="drag(event)">&#9815</div></div>
+        <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="g1" draggable="true" ondragstart="drag(event)">&#9816</div></div>
+        <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="h1" draggable="true" ondragstart="drag(event)">&#9814</div></div>
   </div>
+
 </body>
 </html>
