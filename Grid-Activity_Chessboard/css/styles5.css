@@ -28,6 +28,7 @@ a {
   align-self: center;
   height: 100%;
   width: 100%;
+  cursor: grab;
 }
 .container > div {
   box-shadow: 10px 5px 5px black;
