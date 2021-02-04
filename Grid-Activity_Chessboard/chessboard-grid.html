@@ -4,14 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/styles5.css" >
-  <script src="script/script.js"></script>
-  <script>
-    window.onload = function () {
-      allowDrop();
-      drag();
-      drop();
-    }
-  </script>
+
   <title>Chessboard Grid</title>
 </head>
 <body>
@@ -93,6 +86,13 @@
         <div class="ebony" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="g1" draggable="true" ondragstart="drag(event)">&#9816</div></div>
         <div class="ivory" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="h1" draggable="true" ondragstart="drag(event)">&#9814</div></div>
   </div>
-
+  <script src="script/script.js"></script>
+  <script>
+    window.onload = function () {
+      allowDrop();
+      drag();
+      drop();
+    }
+  </script>
 </body>
 </html>
