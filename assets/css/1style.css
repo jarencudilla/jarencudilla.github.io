@@ -1,0 +1,51 @@
+body {
+    appearance: none;
+    -ms-progress-appearance: unset;
+    -moz-appearance: unset;
+    -webkit-appearance: unset;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+.header h1{
+    font-size: 2.5em;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    
+}
+.lowerbar {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.3em;
+    text-align: right;
+    align-content: right;
+    align-items: center;
+    
+}
+.container {
+    display: flex;
+    width: 200vw;
+    align-items: center;
+}
+.iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 50%;
+}
+.post1 {
+    display: flex;
+    justify-content: cetner;
+    align-items: center;
+    font-size: 2em;
+    text-align: left;
+    color: white;
+    width: 50%;
+}
+
