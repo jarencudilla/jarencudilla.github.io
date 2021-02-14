@@ -293,7 +293,7 @@ video {
   }
 
 /* main slider with CTA */
-
+body,
 #slider,
 .wrap,
 .slide-content {
@@ -475,7 +475,7 @@ video {
 
  /* recommended videos */
 #gameplayvideos {
-  color: #0e1111;
+  color: #f2f2f2;
   width: 100vw;
   text-align: center;
   padding-top: 0 25px;
@@ -493,7 +493,8 @@ video {
     width: 100%;
     height: 80%;
     word-wrap: break-word;
-    background-color: #0e1111;
+    background-color: #f2f2f2;
+    color: #0e1111;
     background-clip: border-box;
     border: none;
     padding-top: 0 25px;
