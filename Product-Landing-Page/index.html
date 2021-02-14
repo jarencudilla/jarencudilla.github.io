@@ -1,0 +1,398 @@
+<!doctype html>
+<html>
+<head>
+<title>Product Landing Page</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+    <div class="loader">
+        <video playsinline autoplay muted poster="videos/div2loadingscreen.mp4">
+            <source src="videos/div2loadingscreen.mp4" type="video/mp4">
+         </video>
+         <audio id="audio1" controls="none" autoplay ><source src="audio/div2loadingscreen_audio.mp4" type="audio/mp4">
+             <p>Your browser does not support the audio element</p>
+         </audio>
+    </div>
+
+    <div class="topnav" id="myTopnav">
+        <div class=topnav-left>
+                <a class="active" href="#home">Xoomvision Gaming</a>
+                <a href="https://jaren.cudilla.net">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>    
+        </div>
+        <div class=topnav-right>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+                <a href="https://twitter.com/jaren"><i class="fa fa-twitter"></i></a>
+                <a href="https://github.com/jarencudilla"><i class="fa fa-github"></i></a>
+                <a href="https://www.facebook.com/jaren.cudilla/"><i class="fa fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/badongpagong/"><i class="fa fa-instagram"></i></a>
+                <a href="mailto:jarencudilla@gmail.com"><i class="fa fa-envelope"></i></a>
+        </div>
+    </div>
+ 
+    <div class="header" id="header">
+        <nav id="nav-bar">
+            <a href="#game" id="header-img"><img src="images/thedivision2_icon3.png" size="250x50px"></a>
+            <a href="#lore" class="nav-link">Lore</a>
+            <div class="dropdown">
+                <button class="dropbtn">Factions
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#factions"> Hyenas</a>
+                    <a href="#factions"> Outcasts</a>
+                    <a href="#factions"> True Sons</a>
+                    <a href="#factions"> Black Tusk</a>
+                    <a href="#factions"> Hunters</a>
+                    <a href="#factions"> WoNY - Cleaners</a>
+                    <a href="#factions"> WoNY - Rikers</a>
+                    <a href="#factions"> Rogue Agents</a>    
+                </div>
+            </div>             
+             <div class="dropdown">
+                <button class="dropbtn">Equipment  
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                <a href="#gear">Weapons</a>
+                <a href="#gear">Gear</a>
+                <a href="#gear">Brand Sets</a>
+                <a href="#gear">Gear Sets</a>
+                <a href="#gear">Exotics</a>
+                <a href="#gear">Mods</a>
+                <a href="#gear">Skills</a>
+                <a href="#gear">Apparel</a>
+                </div>
+             </div>
+            <a href="#location" class="nav-link">Locations</a>
+            <a href="#gameplayvideos" class="nav-link">Videos</a>
+               
+             </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction1()">
+                <i class="fa fa-bars"></i>
+            </a> 
+        </nav>
+    </div>
+
+<section id="main-slider-cta">
+    <div class="wrap">
+        <div id="arrow-left" class="arrow"></div>
+        <div id="slider">
+          <div class="slide slide1">
+            <div class="slide-content">
+                <span><h1>IF WASHINGTON D.C. FALLS,<br>HUMANITY FALLS</h1>All active agents are needed to save the city before it's too late.</span>
+                <div class="btncontainer">
+                <a class="btn" href="#lore">Read More</a> <a class="btn1" href="https://www.ubisoft.com/en-gb/game/the-division/the-division-2/buy">Buy Now</a> 
+               </div>
+            </div>
+
+          </div>
+          <div class="slide slide2">
+            <div class="slide-content">
+                <span><h1>WE SURVIVE</h1>Gear up. Save DC. As you progress through levels,<br>join raids, farm mission and control points gain loots and items to upgrade<br>your gear and get powerful skills to help you in your journey</span>
+                <div class="btncontainer">
+                    <a class="btn" href="#gear">Read More</a> <a class="btn1" href="https://www.ubisoft.com/en-gb/game/the-division/the-division-2/buy">Buy Now</a> 
+                   </div>
+            </div>
+          </div>
+          <div class="slide slide3">
+            <div class="slide-content">
+              <span><h1>WE FIGHT BACK</h1>Play Solo or with a team as you complete objectives,<br> restore settlements, taking down high value targets,<br> cashing in your bounties, and resolving conflicts.</span>
+              <div class="btncontainer">
+                <a class="btn" href="#factions">Read More</a> <a class="btn1" href="https://www.ubisoft.com/en-gb/game/the-division/the-division-2/buy">Buy Now</a> 
+               </div>
+            </div>
+          </div>
+          <div class="slide slide4">
+            <div class="slide-content">
+                <span><h1>WE RISE AGAIN</h1>As we take back the city, completing mission and side quests is the key.<br> But don't forget your bounties and manhunts.<br>Also beware of other entities that are out to stop you.</span>
+                <div class="btncontainer">
+                    <a class="btn" href="#video">Read More</a> <a class="btn1" href="https://www.ubisoft.com/en-gb/game/the-division/the-division-2/buy">Buy Now</a> 
+                </div>
+            </div>
+          </div>
+        <div id="arrow-right" class="arrow"></div>
+    </div>
+      </div>
+</section>
+<h1>Recommended Gameplay Videos</h1>
+<section id="gameplayvideos">
+<div class="card">
+    <div class="card--video">
+      <div class="card__info">
+        <div class="card__info-video">
+          <div class="card__info-video_thumb thumb">
+            <img src='./images/thedivision2_logo1.png'>
+          </div>
+          <iframe id="featureVideo" width="400px" height="250px" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" title="YouTube video player" type="text/html" src="https://www.youtube.com/embed/M4HIaMQlPBs?rel=0&amp;showinfo=0;enablejsapi=1" class="vh-80-lg" sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>
+        </div>
+        <div class="card__info-desc">
+          <p>
+            A solo Heroic run of <br>the American History Museum
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="card--video">
+        <div class="card__info">
+          <div class="card__info-video">
+            <div class="card__info-video_thumb thumb">
+              <img src='./images/thedivision2_logo1.png'>
+            </div>
+            <iframe id="featureVideo" width="400px" height="250px" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" title="YouTube video player" type="text/html" src="https://www.youtube.com/embed/0Ru5S2WpA_8?rel=0&amp;showinfo=0;enablejsapi=1" class="vh-80-lg" sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>
+          </div>
+          <div class="card__info-desc">
+            <p>
+            Manhunt: Concealed Agenda<br>High Priority Target: Bardon Schaeffer
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card--video">
+        <div class="card__info">
+          <div class="card__info-video">
+            <div class="card__info-video_thumb thumb">
+              <img src='./images/thedivision2_logo1.png'>
+            </div>
+            <iframe id="featureVideo" width="400px" height="250px" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" title="YouTube video player" type="text/html" src="https://www.youtube.com/embed/UVi4O9dsxBs?rel=0&amp;showinfo=0;enablejsapi=1" class="vh-80-lg" sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>
+          </div>
+          <div class="card__info-desc">
+            <p>
+            A Solo player’s casual run of the Summit
+            </p>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+<h1>Lore</h1>   
+<section id="lore">
+ <div class="secbg-bg">
+
+<h1>Prologue</h1>
+<p>Seven months after the Green Poison Outbreak, the SHD network shuts down and all agents receive a Division distress call from Washington, D.C.</p>
+<h1>Retaking the Capital</h1>
+<p>The player’s agent makes their way to the city where The Division and the remains of the local Joint Task Force have set up their Base of Operations in the White House. After defeating an attack on the White House shortly after arriving in the city, the agent is briefed on the general situation by Manny Ortega, The Division Coordinator for D.C.</p>
+<p>The agent learns that much of the city is under the control of three main enemy factions: the Hyenas, the Outcasts, and the True Sons. Ortega instructs the agent to work with fellow agent Alani Kelso to help assist civilian settlements, fight the various enemy groups, and restore the SHD Network.</p>
+<p>Meanwhile, Ortega and Kelso uncover information that a cure to Green Poison might be located somewhere in the city, and that President Ellis may have survived the crash of Air Force One and is being held by one of the city's factions. Kelso is reluctant to waste time and resources to rescue Ellis, but Ortega points out that his security clearance may be needed to access the cure.</p>
+
+<p>The agent continues to work to liberate city districts and eventually manages to find and rescue Ellis from Hyena custody. Ellis confirms that a cure to not just Green Poison, but all viral infections, exists, but he can only access it with a special briefcase he had with him on Air Force One.</p>
+
+<p>As the agent has various successes such eliminating high profile and key targets, restoring the SHD network, liberating the city, taking down the Faction leadership and destroying their strongholds. The Endgame starts...</p>
+
+<h1>The Invasion (Endgame)</h1>
+<p>However, as the agent and The Division celebrate their victory, a new faction, the technologically advanced private security contractor Black Tusk, invades the city. Many of D.C.'s landmarks are quickly seized and Ellis goes missing, leaving the agent to head out once again to repel the Black Tusk invasion.</p>
+
+<p>During this time, ECHOs and Comms reveal that the Black Tusk was responsible for the shutting down of the SHD Network and that they had been planning an invasion long before the agent had arrived, supplying arms to the Hyenas and what not. Similarly, the invasion causes mass chaos in D.C., with formerly liberated areas suddenly becoming hot zones and the settlements coming under threat once again.</p>
+
+
+<h1>The Outskirts</h1>
+<p>After a short amount of time passes, both President Ellis and Emeline Shaw are located in the outskirts of Washington, D.C. President Ellis has taken refuge in Camp White Oak, which is under Black Tusk control. The agent assaults the base with a group of JTF for support. The JTF are quickly killed in a trap, leaving just the agents to secure President Ellis. After fighting through waves of Black Tusk, President Ellis manages to escape via helicopter, leaving the agents behind. Emeline Shaw gathers her forces to the Manning National Zoo.</p>
+
+<p>Division agents are given the task of bringing Shaw in, dead or alive. To do this, they are dropped outside the entrance to the zoo, and must secure the monorail line in order to access Shaw. After the agents manage to secure the line, they have to fight through several more waves of Outcasts, and some animals that were left behind, to reach Emeline. In a final stand-off, Division agents must plant explosives to knock out Emeline's weaponized monorail car. During this fight, Emeline is killed, leaving the Outcasts without a leader.</p>
+
+<p>At the same time, a JTF convoy that had previously been assumed to have gone rogue is located. They had been attacked by Outcasts outside Kenley College, and their attackers had secured military-grade technology, a mobile SHD communicator, and several tanks of chemicals that could be used to make bombs. Division agents are tasked with both recovering or destroying the stolen materials, and finding out the final fate of the convoy.</p>
+
+<p>Meanwhile, in D.C. a minor civilian community in the Central Aquarium is under attack from Hyenas, and Division agents receive a distress signal. NSA Site B13 is also being breached by the Black Tusk, which are after the data center held within. While defending the data center, Division agents discover several audio logs detailing the NSA's awareness of Gordon Amherst's radical views.</p>
+
+<h1>The Last Castle (Year One Content)</h1>
+<p>Division agents receive a transmission from an agent currently scouting out The Pentagon. They were looking to see if DARPA had successfully made a perfusion bioreactor, but they ran into a major Black Tusk operation. Agents in D.C. are tasked with securing and investigating The Pentagon in hopes of recovering the reactor.</p>
+<h1>Coney Island (Year One Content)</h1>
+<p>Aaron Keener makes a deal with the Black Tusk stationed on Coney Island. They will get Vitaly Tchernenko and in exchange, they'll owe him a favor. The Black Tusk accept and quarantine Tchernenko just in case he had infected himself whilst he was working for Keener. This is when an SHD drone finds the encampment and relays the information back to The White House. Agents are dispatched to Coney Island to recover Vitaly and neutralize the Black Tusk in the area.</p>
+<p>Division agents successfully breach the ballpark and rescue Tchernenko, despite heavy mortar barrage. Tchernenko is extracted via helicopter and is taken into Division custody. At this point, while the Black Tusk is retreating, the Cleaners launch a surprise attack. This causes the majority of the Black Tusk to be forced to leave, while their local commander, Dolores Jones, stays behind to make a final stand at the roller coaster. The Cleaners promptly blow it up. At this point, the Cleaners retreat and Division agents clean up the rest of the Black Tusk on Coney Island.</p>
+<p>After Dolores Jones was eliminated, a SHD drone got hacked and crashed in New York City. Aaron Keener made an ominous message to Division agents, telling them he'll always be one step ahead of them.</p>
+<h1>Warlords of New York (DLC)</h1>
+<p>A group of agents moves in on Aaron Keener's suspected location, only to find the room empty. Due to Keener's repeated escapes, Division Command in Lower Manhattan decides to call on backup from D.C. to assist in Keener's capture.</p>
+<p>The player, along with Agent Kelso, arrive at the Division Command located in City Hall. The Command is under siege Aaron Keener, his rogue lieutenants, and the Rikers. The building is quickly destroyed and contaminated, becoming a control point later on. With their base destroyed, The Division makes contact with a nearby civilian settlement, Haven, to ask if they can stay there while Aaron Keener is being hunted down. Haven, led by Paul Rhodes, initially denies them access but later begrudgingly allows it under the condition that The Division will leave after Keener is neutralized.</p>
+<p>Throughout the hunt against Keener, they went and eliminated his four lieutenants; James Dragov, Theo Parnell, Vivian Conley, and Javier Kajika to get any intel about Keener's whereabouts and his plans. The Division finally managed to get Keener's location, which is on Liberty Island. However, Black Tusk was already there and were planning to eliminate Keener themselves.</p>
+<p>Despite Black Tusk's efforts, Division agents managed to eliminate their forces, forcing them to retreat. The agents go through Keener's base and learn that Project Eclipse is a ballistic missile filled with Keener's weaponized virus. Keener was planning to launch the missile on Manhattan, to start a "new beginning".</p>
+<p>Despite all the SHD tech equipment at his disposal, the agents managed to disable his missile. Then they went to a prolonged fight against the rogue agent, which ended with him badly wounded. In his final moments, Keener activates the Rogue Network, before ominously taunting the agents before he dies.</p>
+<p>Division agents intercept a conversation between Faye Lau and Bardon Schaeffer through Keener's watch and learn that Faye has went rogue and sided with Black Tusk, proclaiming that she will help them in ending The Division once and for all.</p>
+</div>
+</section>
+<h1>Hostile Factions</h1>
+<section id="factions">
+  <div class="factioncard">
+
+    <div class="factionheader">
+      <img src="./images/hyenas-logo.png" size="50x50px"> 
+      <h1>Hyenas</h1>
+    </div>
+    <div class="factioncontainer">
+        <p>A loosely organized hedonistic scavengers that rely on violence and intimidation to prey on struggling civilian encampments.
+          Much like their animal counterparts, the Hyenas are generally opportunistic raiders and scavengers who prey on the weak but can also stand their ground against powerful foes.</p>
+    </div>
+  </div>
+  <div class="factioncard">
+    <div class="factionheader">
+      <img src="./images/outcasts-logo.png" size="50x50px"> 
+      <h1>Outcasts</h1>
+    </div>
+    <div class="factioncontainer">
+        <p>A hostile group consisting of bitter survivors of a forced CERA quarantine on Theodore Roosevelt Island and the adjoining areas of the Potomac River and is bent on revenge against the authorities who confined them on the island. The Outcasts embrace an extreme nihilism which fuels the grim fanaticis that drives this fearless organization. </p>
+    </div>
+  </div>
+  <div class="factioncard">
+    <div class="factionheader">
+      <img src="./images/truesons-logo.png" size="100x100px">
+      <h1>True Sons</h1>
+      </div>
+      <div class="factioncontainer"> 
+        <p>A powerful, well-armed group of paramilitary soldiers is comprised of Joint Task Force deserters and mutineers. Led by a former JTF field commander named Antwon Ridgeway, the True Sons are typical of a warlord-led faction in a conflict zone or failed state. Their ruthlessness and combat prowess make them a formidable force in the field.</p>
+      </div>
+    </div>
+    <div class="factioncard">
+      <div class="factionheader">
+      <img src="./images/blacktusks-logo.png" size="50x50px">
+      <h1>Black Tusk</h1>
+    </div>
+    <div class="factioncontainer">  
+        <p>The Black Tusk also known as the Black Tusk Special Unit or BTSU, is a major enemy faction that appears at the endgame in Tom Clancy's The Division 2. Operating as a large PMC with ties to the U.S. government, the BTSU invaded Washington, D.C. shortly after the True Sons were pushed out of the Capitol Building.</p> 
+      </div>
+    </div>
+    <div class="factioncard">
+      <div class="factionheader">
+        <img src="./images/hunters-logo.png" size="50x50px"> 
+        <h1>Hunters</h1>
+      </div>
+      <div class="factioncontainer"> 
+        <p>We have very limited intel on this faction as they seem to hunt primarily SHD agents, but also Rogue Division agents and are hostile to other factions as well.</p>
+      </div>
+    </div>
+    <div class="factioncard">
+      <div class="factionheader">
+        <img src="./images/cleaners-logo.png" size="50x50px"> 
+        <h1>Cleaners</h1>
+      </div>
+       <div class="factioncontainer">  
+         <p>From the ashes of Joe Ferro's Cleaners, Division agents are yet to experience terror from a more brutal Cleaners thanks to Rogue Agent Vivian Conley. The Cleaners Base of Operations is at the Stranded tanker.</p>
+       </div>
+      </div>
+    <div class="factioncard">
+      <div class="factionheader">
+        <img src="./images/rikers-logo.png" size="50x50px">   
+        <h1>Rikers</h1>
+      </div>
+      <div class="factioncontainer"> 
+        <p>Division Agents took down Larae Barrett in NYC, seven months later a new more deadlier Rikers faction arise led by James Dragov and with the Keener Manhunt ongoing on Manhattan. The Rikers now control the Financial District of Manhattan.</p>
+      </div>
+    </div>
+    <div class="factioncard">
+      <div class="factionheader">
+         <img src="./images/rogues-logo.png" size="50x50px">
+         <h1>Rogue Agents</h1>
+        </div>
+        <div class="factioncontainer"> 
+      <p>Former Division agents who disavowed the Strategic Homeland Division for one reason or another, and has either lent their services to another factions or are working on their own, both cases working against The Division itself.  </p>
+    </div>
+  </div>
+</section>
+<h1>WEAPONS AND GEAR</h1>
+<section id="gear">
+<div class="gearcontainer">
+  <p>
+    Every Agent is equipped with a primary weapon, secondary weapons and a sidearm on their loadouts.
+    Each loadout has 6 pieces of gear which are a mask, a go bag, a holster, and protective gears such as the gloves, knees, and chest protection. Every gear has 3 main stats, Offensive, Defensive and Skills these stats allows the player to be more powerful by matching your current loadout for each specific mission
+  </p>
+  <img src="./images/gear-division2.png" alt="" width="900" >
+
+<h2>Brand Sets</h2>
+<p>Each gear has a brand, if the player equips multiple gear from the same brand (up to 3 items), he will receive a set bonus.</p> 
+
+<h2>Gear Sets</h2>
+<img src="./images/gearsets-division2.png" alt="" width="900" >
+<p>Apart from Brand Sets, Division Agents have access to Gear Sets which are specialized gear for your loadout, If you want to go Full DPS, A healer or a skill build, these Gear Sets can be custom tailored for your playstyle </p>
+
+<h2>Exotics</h2>
+<img src="./images/exoticgear-division2.png" alt="Exotic Gear" width="800"> <img src="./images/exoticweapon-division2.png" alt="Exotic Weapons" width="800">
+<p>Occasionally, you come across exotic gears that are more powerful that their regular counterparts.
+  Exotic weapons and gears can be equipped at the same time, but you can't equip an exotic gear type on different slot. IE you can't equip another exotic weapon as your secondary or side arm, if you already have an exotic weapon on your primary weapon slot. 
+</p> 
+</div>  
+</section>
+<h1>Locations</h1>
+<section id="locations">
+<div id="mapcontainer">
+  <div id="map">
+    <h1>DC Map</h1>  
+    <p>
+       Currently creating an interactive map for DC and Manhattan (WonY). 
+        Enjoy the Google Map version 
+      </p>
+    <iframe src="https://www.google.com/maps/d/embed?mid=1hyQn1dGhKr3CJKHgU7cxCZt2znXqyJE9" width="100%" height="100%"></iframe>
+  </div>
+</div>
+</section>
+<h1>Media</h1>  
+<section id="mediaslider">
+    <div class="mediawrap">
+        <div id="marrow-left" class="marrow"></div>
+         <div id="mediaslider">
+          <div class="mslide mslide1">
+            <div class="mediaslide-content"></div>
+          </div>
+         </div>
+         <div id="mediaslider">
+          <div class="mslide mslide2">
+            <div class="mediaslide-content"></div>
+          </div>
+         </div>
+         <div id="mediaslider">
+          <div class="mslide mslide3">
+            <div class="mediaslide-content"></div>
+          </div>
+         </div>
+         <div id="mediaslider">
+          <div class="mslide mslide4">
+            <div class="mediaslide-content"></div>
+          </div>
+         </div>
+         <div id="mediaslider">
+          <div class="mslide mslide5">
+            <div class="mediaslide-content"></div>
+          </div>
+         </div>
+        <div id="marrow-right" class="marrow"></div>
+    </div>
+</section>
+    
+<section id="about">
+   <h1>About</h1><p>An Open-world 3rd person Shooter RPG developed by Massive Entertainment and Ubisoft. </p>
+</section>
+<section id="form">
+  <form id="survey-form" action="result.html" method="post">
+    <p class="label1"><label id="email-label" for="email">If you want to get the latest news and updates about the game.</label></p>
+    <div class="container">
+    <input type="email" required id="email-label" name="user_email" placeholder="example@email.com"> <button type="subscribe" class="submitbtn" id="submit">Subscribe</a>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <h1>Contact Xoomvision Gaming</h1><p>For Collabs and other work related stuff. you can reach me at jarencudilla@gmail.com</p>
+</section>
+<section id="footer">
+<div class="footerme" id="myfoot">
+    <div class=footerme>
+            <a href="#top">Xoomvision Gaming</a>
+            <a href="#contact">Contact</a>
+            <a href="#Privacy">Privacy</a>
+            <a href="#TOS">TOS</a>      
+    </div>
+</div>
+</section>
+
+<script src="./scripts/scripts.js"></script>
+<script src="./scripts/slider-scripts.js"></script>
+<script src="./scripts/mediaslider-scripts.js"></script>
+</body>
+</html>
