@@ -9,5 +9,6 @@ bmi_john = jmass / (jheight * jheight);
 console.log (bmi_john);
 
 var comp = bmi_victor > bmi_john;
-console.log ("Is Victor's BMI higher than John's?" + comp );
+console.log ("Is Victor's BMI higher than John's?  " + comp );
 
+ 
