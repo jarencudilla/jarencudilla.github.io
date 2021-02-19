@@ -1,7 +1,7 @@
 var vheight = prompt("Victor's Height: (in Meters)");
-var vmass = prompt("Victor's Weight:");
+var vmass = prompt("Victor's Weight: (in kg)");
 var jheight = prompt("John's Height: (in Meters)");
-var jmass = prompt("John's Weight:");
+var jmass = prompt("John's Weight: (in kg)");
 
 bmi_victor = vmass / (vheight * vheight);
 console.log (bmi_victor);
