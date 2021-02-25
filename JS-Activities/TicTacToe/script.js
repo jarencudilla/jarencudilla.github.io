@@ -1,7 +1,17 @@
 const theCell = document.querySelectorAll(".cell")
 const theBoard = document.getElementById("gameboard")
+const status = document.getElementById("status")
+const statusMsgx = "Player 1's turn (X)"
+const statusMsgo = "Player 2's turn (O)"
+const statusMsgdraw = "Draw!"
+const statusMsgcheckwinner = " won the chicken dinner!"
 const player1x = 'x';
 const player2o = 'o';
+
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const resetBtn = document.getElementById("resetBtn");
+
 
 let theGameboard = [
     ["", "", ""],
@@ -13,6 +23,7 @@ let moveCycle;
 let gameCheckDone = false;
 let ninjaMoves = [];
 let countninjaMoves = 0;
+startGame();
 
 function startGame() {
     moveCycle = false;
@@ -22,12 +33,6 @@ function startGame() {
 theCell.forEach(cell => {
     cell.addEventListener('click', clickHandler, {once:true})
 });
-
-const statusMsgx = "Player 1's turn (X)"
-const statusMsgo = "Player 2's turn (O)"
-const statusMsgdraw = "Draw!"
-const statusMsgcheckwinner = " won the chicken dinner!"
-let status = document.getElementById("status")
 
 function clickHandler() {
     if(gameCheckDone === false) {
@@ -42,7 +47,7 @@ function clickHandler() {
     }
     else {
         theBoard.classList.remove(player1x, player2o);
-        console.log("Start a new game.")
+        console.log("Click Start")
     }
 }
 function playerMarker(cell, currentPlayer) {
@@ -66,7 +71,7 @@ function logMoves(cell, currentPlayer) {
 function switchPlayer() {
         moveCycle = !moveCycle
 }
-function updatePlayer() {
+function updatePlayer(statusMsgcheckwinner) {
     theBoard.classList.remove(player1x, player2o);
     if (gameCheckDone === false) {
         if (moveCycle) {
@@ -80,7 +85,7 @@ function updatePlayer() {
     }
 }
 function checkWinner(currentPlayer) {
-    let pWinner = currentPlayer;
+    let pWinner = currentPlayer.toUpperCase();
 // check horizontal       
 for (let row=0; row<theGameboard.length; row++) {
     let a = theGameboard[row][0];
@@ -88,7 +93,7 @@ for (let row=0; row<theGameboard.length; row++) {
     let c = theGameboard[row][2];
 if(a && a===b && b===c && gameCheckDone === false) {
     console.log(pWinner + " " + "wins!")
-    hasWinner();
+    hasWinner(pWinner);
 break;
 }
 }
@@ -99,7 +104,7 @@ for (let column=0; column<theGameboard.length; column++) {
     let c = theGameboard[2][column];
 if(a && a===b && b===c && gameCheckDone === false) {
     console.log(pWinner + " " + "wins!")
-    hasWinner();
+    hasWinner(pWinner);
 break;
 }
 }
@@ -119,15 +124,13 @@ if (gameCheckDone === false) {
     let c = theGameboard[2][2];
 if(a && a===b && b===c) {
     console.log(pWinner + " " + "wins!")
-    hasWinner();
+    hasWinner(pWinner);
     }
 }    
 }
-function hasWinner() {
+function hasWinner(pWinner) {
     gameCheckDone = true;
     status.innerHTML = pWinner + statusMsgcheckwinner;
-    prevBtn.style.display = "flex"
-    nextBtn.style.display = "flex"
     nextBtn.style.visibility = "hidden"
         }
     for (let row=0; row<theGameboard.length; row++) {
@@ -140,8 +143,6 @@ function hasWinner() {
 if (isnotemptyCell === 9 && gameCheckDone === false) {
     gameCheckDone = true;
     status.innerHTML = statusMsgdraw;
-    prevBtn.style.display = "flex"
-    nextBtn.style.display = "flex"
     nextBtn.style.visibility = "hidden"
     console.log("Draw!")
     }
@@ -151,9 +152,7 @@ if (isnotemptyCell === 9 && gameCheckDone === false) {
 
 
 //button stuff
-const prevBtn = document.getElementById("prev");
-const nextBtn = document.getElementById("next");
-const resetBtn = document.getElementById("reset");
+
 
 function resetGameboard() {
     theGameboard = [
@@ -169,8 +168,8 @@ function resetGameboard() {
             cell.classList.remove(player1x, player2o);
             cell.addEventListener('click', clickHandler, {once:true});
         });
-        prevBtn.style.display = "none"
-        nextBtn.style.display = "none"
+        prevBtn.style.visibility = "hidden"
+        nextBtn.style.visibility = "hidden"
         startGame();
     }
 
@@ -212,7 +211,7 @@ function moveNext() {
             const turn = moveData[1];
             const row = moveData[2];
             const column = moveData[3];
-            const cell = document.querySelector(`[data-row='${row}'][data-column='${column}']`);
+            const cell = document.querySelector("[data-row='${row}'][data-column='${column}']");
             cell.classList.add(turn);
     if (countninjaMoves === ninjaMoves.length - 1) {
                 nextBtn.style.visibility = "hidden"
@@ -231,4 +230,3 @@ function logToContainer (message) {
     messageElement.innerHtml = message
     container.appendChild(messageElement)
 }
-startGame();
