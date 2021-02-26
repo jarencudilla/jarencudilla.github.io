@@ -94,6 +94,8 @@ for (let row=0; row<theGameboard.length; row++) {
 if(a && a===b && b===c && gameCheckDone === false) {
     console.log(pWinner + " " + "wins!")
     hasWinner(pWinner);
+    prevBtn.style.visibility = "visible"
+    nextBtn.style.visibility = "visible"
 break;
 }
 }
@@ -105,6 +107,8 @@ for (let column=0; column<theGameboard.length; column++) {
 if(a && a===b && b===c && gameCheckDone === false) {
     console.log(pWinner + " " + "wins!")
     hasWinner(pWinner);
+    prevBtn.style.visibility = "visible"
+    nextBtn.style.visibility = "visible"
 break;
 }
 }
@@ -115,7 +119,9 @@ if (gameCheckDone === false) {
     let c = theGameboard[2][0];
 if(a && a===b && b===c) {
     console.log(pWinner + " " + "wins!")
-    hasWinner();
+    hasWinner(pWinner);
+    prevBtn.style.visibility = "visible"
+    nextBtn.style.visibility = "visible"
     }
 } 
 if (gameCheckDone === false) {
@@ -125,6 +131,8 @@ if (gameCheckDone === false) {
 if(a && a===b && b===c) {
     console.log(pWinner + " " + "wins!")
     hasWinner(pWinner);
+    prevBtn.style.visibility = "visible"
+    nextBtn.style.visibility = "visible"
     }
 }    
 }
@@ -211,7 +219,7 @@ function moveNext() {
             const turn = moveData[1];
             const row = moveData[2];
             const column = moveData[3];
-            const cell = document.querySelector("[data-row='${row}'][data-column='${column}']");
+            const cell = document.querySelector(`[data-row='${row}'][data-column='${column}']`);
             cell.classList.add(turn);
     if (countninjaMoves === ninjaMoves.length - 1) {
                 nextBtn.style.visibility = "hidden"

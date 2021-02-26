@@ -9,7 +9,7 @@
   }
 body {
     font-family: "Arial", sans-serif;
-    background-color: dimgrey;
+    background-color: black;
     
 }
 .container {
@@ -19,7 +19,7 @@ body {
     margin-right: 20vw;
     margin-top: 10vw;
     margin-bottom: 10vw;;
-    background-color: darkgray;
+    background-color: black;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -36,12 +36,14 @@ body {
     font-family: 'Rock Salt', cursive;
     top: 0;
     margin: 0;
+    color: blanchedalmond;
 }
 
-#status div {
+#status {
     text-align: center;
     font-size: 1.2rem;
     font-family: 'Rock Salt', cursive;
+    color: blanchedalmond;
 }
 .btn-container {
     display: flex;
@@ -73,8 +75,8 @@ body {
 .cell {
     width: var(--cell-size);
     height: var(--cell-size);
-    box-shadow: 0 0 0 1px #333333;
-    border: 1px solid #333333;
+/* box-shadow: 0 0 0 1px #333333; */
+    border: 3px solid white;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -113,7 +115,7 @@ body {
 .cell.o::after {
     width: calc(var(--mark-size) * 0.7);
     height: calc(var(--mark-size) * 0.7);
-    background-color: darkgray;
+    background-color: black;
 }
 
 .cell.x,
