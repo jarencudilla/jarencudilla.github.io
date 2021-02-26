@@ -7,7 +7,6 @@ const statusMsgdraw = "Draw!"
 const statusMsgcheckwinner = " won the chicken dinner!"
 const player1x = 'x';
 const player2o = 'o';
-const 
 
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
@@ -69,7 +68,6 @@ function logMoves(cell, currentPlayer) {
         ];
         console.log(`Turn ${ninjaMoves[countninjaMoves][0] + 1}: ${ninjaMoves[countninjaMoves][1].toUpperCase()} at ${Number((ninjaMoves[countninjaMoves][2])) + 1}, ${Number(ninjaMoves[countninjaMoves][3]) + 1}`);
         let moveList = document.getElementById("movelist")
-        moveList.innerHTML = "Turn "+ (ninjaMoves[countninjaMoves][0] + 1 ) + currentPlayer + " at" +
         countninjaMoves ++;
 }
 function switchPlayer() {
@@ -234,10 +232,3 @@ function moveNext() {
     }
 }
 
-//to display console.log on movelist div
-function logToContainer (message) {
-    var container = document.getElementById('movelist')
-    var messageElement = document.createElement('pre')
-    messageElement.innerHtml = message
-    container.appendChild(messageElement)
-}
