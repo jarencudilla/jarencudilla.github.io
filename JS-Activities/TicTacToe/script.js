@@ -29,6 +29,7 @@ startGame();
 function startGame() {
     moveCycle = false;
     updatePlayer();
+    status.innerHTML = "Insert coin to start!";
 }
 
 theCell.forEach(cell => {
