@@ -7,6 +7,7 @@ const statusMsgdraw = "Draw!"
 const statusMsgcheckwinner = " won the chicken dinner!"
 const player1x = 'x';
 const player2o = 'o';
+const 
 
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
@@ -66,6 +67,8 @@ function logMoves(cell, currentPlayer) {
         (cell.dataset.column)
         ];
         console.log(`Turn ${ninjaMoves[countninjaMoves][0] + 1}: ${ninjaMoves[countninjaMoves][1].toUpperCase()} at ${Number((ninjaMoves[countninjaMoves][2])) + 1}, ${Number(ninjaMoves[countninjaMoves][3]) + 1}`);
+        let moveList = document.getElementById("movelist")
+        moveList.innerHTML = "Turn "+ (ninjaMoves[countninjaMoves][0] + 1 ) + currentPlayer + " at" +
         countninjaMoves ++;
 }
 function switchPlayer() {
@@ -161,50 +164,49 @@ if (isnotemptyCell === 9 && gameCheckDone === false) {
 
 //button stuff
 
-
 function resetGameboard() {
     theGameboard = [
-            ["", "", ""],
-			["", "", ""],
-			["", "", ""]
+        ["", "", ""],
+		["", "", ""],
+		["", "", ""]
     ];
-        ninjaMoves = [];
-        countninjaMoves = 0
-        gameCheckDone = false;
-        isnotemptyCell = 0
-        theCell.forEach(cell => {
-            cell.classList.remove(player1x, player2o);
-            cell.addEventListener('click', clickHandler, {once:true});
-        });
-        prevBtn.style.visibility = "hidden"
-        nextBtn.style.visibility = "hidden"
-        startGame();
-    }
+    ninjaMoves = [];
+    countninjaMoves = 0
+    gameCheckDone = false;
+    isnotemptyCell = 0
+    theCell.forEach(cell => {
+        cell.classList.remove(player1x, player2o);
+        cell.addEventListener('click', clickHandler, {once:true});
+    });
+    prevBtn.style.visibility = "hidden"
+    nextBtn.style.visibility = "hidden"
+    startGame();
+}
 
-    function movePrev() {
-        if (countninjaMoves === ninjaMoves.length) {
-            countninjaMoves -= 1;
+function movePrev() {
+    if (countninjaMoves === ninjaMoves.length) {
+        countninjaMoves -= 1;
+    }
+    if (countninjaMoves < 0) {
+        countninjaMoves += 1;
+    }
+    if (countninjaMoves >= 0) {
+        nextBtn.style.visibility="visible"
+        let moveData = ninjaMoves[countninjaMoves];
+        const turn = moveData[1];
+        const row = moveData[2];
+        const column = moveData[3];
+        const cell = document.querySelector(`[data-row='${row}'][data-column='${column}']`);
+        cell.classList.remove(turn);
+    if (countninjaMoves === 0) {
+        prevBtn.style.visibility = "hidden"
+        console.log("First");
         }
-        if (countninjaMoves < 0) {
-            countninjaMoves += 1;
-        }
-        if (countninjaMoves >= 0) {
-            nextBtn.style.visibility="visible"
-            let moveData = ninjaMoves[countninjaMoves];
-            const turn = moveData[1];
-            const row = moveData[2];
-            const column = moveData[3];
-            const cell = document.querySelector(`[data-row='${row}'][data-column='${column}']`);
-            cell.classList.remove(turn);
-            if (countninjaMoves === 0) {
-                prevBtn.style.visibility = "hidden"
-                console.log("First");
-            }
-            else {
-                countninjaMoves --;
-            }
+    else {
+        countninjaMoves --;
         }
     }
+}
 
 function moveNext() {
     if (countninjaMoves === ninjaMoves.length) {
