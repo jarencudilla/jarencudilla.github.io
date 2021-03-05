@@ -14,7 +14,7 @@ var ranks = ["Ace", "2", "3", "4", "5", "6", "7", "8","9","10","Jack","Queen","K
 
 var deck = new Array();
 var newdeck = new Array();
-
+ 
 function createDeck()
 {
 	for(var i = 0; i < suits.length; i++)
