@@ -92,6 +92,7 @@ function deal() {
 	console.log(deal);
 	console.log(newdeck.length);
 }
+
  
 // function mainMenu(num) {
 // 	case 1:
