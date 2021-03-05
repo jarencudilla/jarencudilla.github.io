@@ -23,9 +23,7 @@ let moveCycle;
 let gameCheckDone = false;
 let ninjaMoves = [];
 let countninjaMoves = 0;
-
-resetGameboard();
-
+startGame();
 
 function startGame() {
     moveCycle = false;
@@ -234,4 +232,3 @@ function moveNext() {
     }
 }
 
-startGame();

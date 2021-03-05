@@ -85,6 +85,14 @@ function sortDescending() {
     console.log(sortedDescDeck.reverse())
 	//return sortedSuitsDeck;
 }
+
+function deal() {
+    var deal = newdeck.pop(`${ranks} of ${suits}`);
+	//deal = newdeck.filter(function(obj){return obj.})
+	console.log(deal);
+	console.log(newdeck.length);
+}
+
  
 // function mainMenu(num) {
 // 	case 1:
