@@ -43,7 +43,7 @@ function shuffle() {
 }
 
 function sortbyRank() {
-	var sortedRanksDeck = newdeck.splice();
+	var sortedRanksDeck = newdeck;
     sortedRanksDeck.sort(function(a, b) {
         let cardIndex1 = ranks.indexOf(a[0]);
         let cardIndex2 = ranks.indexOf(b[0]);
