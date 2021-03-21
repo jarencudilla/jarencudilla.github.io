@@ -131,18 +131,24 @@ button {
     width: 200px;
     left: 50%;
     transform: translateX(-50%);
-    color: #555;
+    color: #f1f1f1;
     background: none;
-    border: none;
     font-family: Lato;
     font-size: 20px;
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 300;
     transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
 }
 
-button:hover { font-weight: 600; }
+button:hover {
+    font-weight: 600; 
+    color: white;
+    font-size: 22px;
+    border: 2px solid #EB4D4D;
+    background-color: #EB4D4D;
+}
 button:hover i { margin-right: 20px; }
 
 button:focus {
@@ -150,13 +156,13 @@ button:focus {
 }
 
 i {
-    color: #EB4D4D;
+    color: #f1f1f1;
     display: inline-block;
     margin-right: 15px;
     font-size: 32px;
-    line-height: 1;
-    vertical-align: text-top;
-    margin-top: -4px;
+    line-height: 1.5;
+    vertical-align: middle;
+    margin-top: -3px;
     transition: margin 0.3s;
     
 }
@@ -169,11 +175,11 @@ i {
     color: #fff;
 }
 .btn-roll {
-    top: 420px;
+    top: 417px;
     color: #fff;
 }
 .btn-hold {
-    top: 460px;
+    top: 470px;
     color: #fff;
 }
 
@@ -184,20 +190,6 @@ i {
     transform: translateX(-50%);
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
-}
-
-.dice::after {
-    content:'';
-    animation: rolling 2s linear infinite;
-}
-
-@keyframes rolling {
-    0% {content: url(dice-1.png);}
-    20% {content: url(dice-2.png);}
-    40% {content: url(dice-5.png);}
-    60% {content: url(dice-3.png);}
-    80% {content: url(dice-4.png);}
-    100% {content: url(dice-6.png);}
 }
 
 .winner { background-color: #f7f7f7; }
