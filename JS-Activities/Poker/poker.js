@@ -71,9 +71,12 @@ function sortAscending() {
         let cardIndex2 = sortedAscDeck.indexOf(b[0]);
         return cardIndex1 - cardIndex2;
     });
-    console.log(sortedAscDeck)
+    console.log(sortedAscDeck.ranks(a))
 	//return sortedSuitsDeck;
 }
+
+
+
 
 function sortDescending() {
 	var sortedDescDeck = newdeck;
