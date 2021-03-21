@@ -1,0 +1,322 @@
+/**********************************************
+*** GENERAL
+**********************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Architects Daughter', cursive;
+    
+}
+
+.clearfix::after {
+    content: "";
+    display: box;
+    clear: both;
+}
+
+body {
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: #555;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.wrapper {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.player-0-panel,
+.player-1-panel {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+    align-self: center;
+    background-color: #212121;
+}
+
+
+
+/**********************************************
+*** PLAYERS
+**********************************************/
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    color: #fff;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #EB4D4D;
+    margin-bottom: 130px;
+}
+
+.active { background-color: gray; }
+.active .player-name {
+    font-weight: 300;
+    color: #fff;
+ }
+
+.active .player-name::after {
+    content: url(https://pic.funnygifsbox.com/uploads/2020/02/funnygifsbox.com-2020-02-06-14-56-01-7.gif);
+    font-size: 47px;
+    background-size: 10px 20px;
+    position: absolute;
+    color: #EB4D4D;
+    top: 20px;
+    right: 60px;
+    
+}
+
+.player-current-box {
+    background-color: #EB4D4D;
+    color: #fff;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #fff;
+    /*  */
+}
+
+.player-current-score {
+    font-size: 30px;
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { font-weight: 600; }
+button:hover i { margin-right: 20px; }
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: #EB4D4D;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+    
+}
+.btn-rules { 
+    top: 20px;
+    color: #fff;
+}
+.btn-new { 
+    top: 80px;
+    color: #fff;
+}
+.btn-roll {
+    top: 420px;
+    color: #fff;
+}
+.btn-hold {
+    top: 460px;
+    color: #fff;
+}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.dice::after {
+    content:'';
+    animation: rolling 2s linear infinite;
+}
+
+@keyframes rolling {
+    0% {content: url(dice-1.png);}
+    20% {content: url(dice-2.png);}
+    40% {content: url(dice-5.png);}
+    60% {content: url(dice-3.png);}
+    80% {content: url(dice-4.png);}
+    100% {content: url(dice-6.png);}
+}
+
+.winner { background-color: #f7f7f7; }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 100ms ease-in;
+    -moz-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
+    pointer-events: none;
+}
+
+p {
+    text-align: center;
+    font-size: 24px;
+}
+
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 3px;
+    background: #fff;
+    text-align: center;
+}
+.close {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f26d7d;
+    color: #fff;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 34px;
+    height: 34px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+    padding-top: 5px;
+}
+.close:hover {
+    background: #fa3f6f;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #0e1111;
+    width: 100vw;
+    height: 4rem;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    font-size: 32px;
+    align-items: center;
+  }
+  
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 32px;
+}
+.active {
+    background-color: #0e1111;
+    color: #FF6D10;
+  }
+  .topnav a:hover {
+    background-color: #0e1111;
+    color: #FF6D10;
+  } 
+.footer {
+    overflow: hidden;
+    background-color: #0e1111;
+    width: 100vw;
+    height: 4rem;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+}
+.footer a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 32px;
+}
+.active {
+    background-color: #0e1111;
+    color: #FF6D10;
+}
+.footer a:hover {
+    background-color: #0e1111;
+    color: #FF6D10;
+}
