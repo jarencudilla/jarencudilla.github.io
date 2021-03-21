@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+        
+    <title>Pig Game</title>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="https://jaren.cudilla.net">Jaren Cudilla</a>
+        <a href="#modal">Piggie Rules</a>    
+    </div>
+    <div id="modal" class="modalDialog">
+        <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2>Piggie (Dice Game) Rules</h2>
+        <img src="https://pic.funnygifsbox.com/uploads/2020/02/funnygifsbox.com-2020-02-06-14-56-10-52.gif" alt="Piggie!">
+        <p>The game has 2 players, playing in rounds</p>
+        <p>In each turn, a player rolls a dice as many times as he wishes. Each result get added to his ROUND score</p>
+        <p>BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn</p>
+        <p>The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn</p>
+        <p>The first player to reach 100 points on GLOBAL score wins the game</p>
+        </div>
+    </div>
+
+<div class="wrapper clearfix">
+    <div class="player-0-panel active">
+        <div class="player-name" id="name-0">Player 1</div>
+        <div class="player-score" id="score-0">0</div>
+        <div class="player-current-box">
+            <div class="player-current-label">Current</div>
+            <div class="player-current-score" id="current-0">0</div>
+        </div>
+    </div>
+    
+    <div class="player-1-panel">
+        <div class="player-name" id="name-1">Player 2</div>
+        <div class="player-score" id="score-1">0</div>
+        <div class="player-current-box">
+            <div class="player-current-label">Current</div>
+            <div class="player-current-score" id="current-1">0</div>
+        </div>
+    </div>
+    
+    <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+    <button class="btn-roll"value="PLAY" onclick="play()"><i class="ion-ios-loop"></i>Roll dice</button>
+    <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+    
+    <img src="dice-5.png" alt="Dice" class="dice">
+    <audio id="audio" src="rolldice.wav"></audio>
+</div>
+<div class="footer">
+    <a href="https://twitter.com/jaren"><i class="fa fa-twitter"></i></a>
+    <a href="https://github.com/jarencudilla"><i class="fa fa-github"></i></a>
+    <a href="https://www.facebook.com/jaren.cudilla/"><i class="fa fa-facebook-square"></i></a>
+    <a href="https://www.instagram.com/badongpagong/"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/channel/UCsAe1ITCyM_x6mAqGjtb9Lg"><i class="fa fa-youtube"></i></a>
+    <a href="mailto:jarencudilla@gmail.com"><i class="fa fa-envelope"></i></a>
+</div> 
+   
+    <script src="pig.js"></script>
+    </body>
+</html>
+
+
