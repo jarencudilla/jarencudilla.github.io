@@ -52,45 +52,43 @@ for (let i = 0; i < 52; i++)
 function sortbyRank() {
   let sortedRanksDeck = [];
 	sortedRanksDeck = deck.slice(0,52); 
-    sortedRanksDeck.sort(function(a, b) 
-    { if (a.Rank > b.Rank) return 1 
-        else if (a.Rank < b.Rank) return -1 
-        else return 0
-       //return a.Rank - b.Rank;
+    sortedRanksDeck.sort(function(a, b) { 
+        if (ranks.indexOf(a) > ranks.indexOf(b)) return 1 
+            else if (ranks.indexOf(a) < ranks.indexOf(a)) return -1 
+            else return 0
     });
     //console.log(sortedRanksDeck)
-	return sortedRanksDeck;
+	return sortedRanksDeck.sort();
 } 
 
 function sortbySuit() {
   let sortedSuitsDeck = []; 
-	sortedSuitsDeck = deck.slice(0,52);
-    sortedSuitsDeck.sort(function(a, b) 
-    { if (a.Suit < b.Suit) return 1
-        else if (a.Suit > b.Suit) return -1
-        else return 0
-        //return a.Suit - b.Suit;
+	//sortedSuitsDeck = deck.slice(0,52);
+     sortedSuitsDeck.sort(function(a, b) { 
+         if (deck.indexOf(a) > deck.indexOf(b)) return 1
+            else if (deck.indexOf(a) < suits.indexOf(b)) return -1
+            else return 0
     });
-    console.log(sortedSuitsDeck.sort())
-	return sortedSuitsDeck;
+    //console.log(sortedSuitsDeck)
+	return sortedSuitsDeck.sort();
 }
 
 function sortAscending() {
     let sortedAscDeck = [];
-	sortedAscDeck = deck.slice(0,99);
+	sortedAscDeck = deck.slice(0,52);
     sortedAscDeck.sort(function(a, b) {
         for (let i = 0; i < deck.length; i++) {
-        let cardIndex1 = sortedAscDeck.indexOf(a[0]);
-        let cardIndex2 = sortedAscDeck.indexOf(b[i]);
+        let cardIndex1 = deck.indexOf(a);
+        let cardIndex2 = deck.indexOf(b);
         return cardIndex1 - cardIndex2;
     }});
    // console.log(sortedAscDeck)
-	return sortedAscDeck;
+	return sortedAscDeck.sort();
 }
 
 function sortDescending() {
     let sortedDescDeck = [];
-	sortedDescDeck = deck.slice(0,99);
+	sortedDescDeck = deck.slice(0,52);
     sortedDescDeck.sort(function(a, b) {
         for (let i = 0; i < deck.length; i++) {
         let cardIndex1 = sortedDescDeck.indexOf(a[i]);
