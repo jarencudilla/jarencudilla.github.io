@@ -29,6 +29,12 @@ if (gameActive) {
   var diceDisplay = document.querySelector('.dice');
   diceDisplay.style.display = 'block';
   diceDisplay.src = 'dice-' + dice + '.png';
+  
+  // window.requestAnimationFrame(() => {
+  //   window.requestAnimationFrame(() => {
+  //     document.querySelector(".dice").className = "Rolling dice";
+  //   });
+  // });
 
 if (dice !== 1) {
   currentScore += dice;

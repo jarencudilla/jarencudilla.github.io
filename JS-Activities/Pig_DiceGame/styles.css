@@ -187,6 +187,9 @@ i {
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
+.dice::before .dice::after {
+    transform: rotate(720deg);
+  }
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
@@ -220,7 +223,7 @@ p {
     width: 90%;
     position: relative;
     margin: 10% auto;
-    padding: 20px;
+    padding: 0;
     border-radius: 3px;
     background: #fff;
     text-align: center;
@@ -261,7 +264,7 @@ p {
     top: 0;
     font-size: 32px;
     align-items: center;
-  }
+}
   
 .topnav a {
     float: left;
@@ -275,11 +278,11 @@ p {
 .active {
     background-color: #0e1111;
     color: #FF6D10;
-  }
-  .topnav a:hover {
+}
+.topnav a:hover {
     background-color: #0e1111;
     color: #FF6D10;
-  } 
+} 
 .footer {
     overflow: hidden;
     background-color: #0e1111;
@@ -308,3 +311,48 @@ p {
     background-color: #0e1111;
     color: #FF6D10;
 }
+
+/* dice::after {
+    content:'';
+    animation: rolling 6s linear infinite;
+}
+.rolling {
+    animation: rotate 0.7s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+/* dice::after {
+    content:'';
+    animation: rotate 0.7s;
+  }
+
+
+@keyframes rotate {
+    0% {
+        content: url(dice-1.png);
+        transform: rotate(0);
+    }
+    20% {
+        content: url(dice-2.png);
+    }
+    40% {
+        content: url(dice-5.png);
+    }
+    60% {
+        content: url(dice-3.png);
+    }
+    80% {
+        content: url(dice-4.png);
+    }
+    100% {
+        content: url(dice-6.png);
+        transform: rotate(360deg);
+    }} */
