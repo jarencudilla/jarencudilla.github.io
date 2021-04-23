@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet"> 
+    <title>superhero Comic Catalog</title>
+</head>
+<body>
+<header>
+    <div class="topnav" id="myTopnav">
+        <div class=topnav-left>
+            <a class="active" href="index.html">Superhero Catalog</a>
+            <a href="https://jaren.cudilla.net">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>    
+        </div>
+        <div class=topnav-right>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i></a>
+            <a href="https://twitter.com/jaren"><i class="fa fa-twitter"></i></a>
+            <a href="https://github.com/jarencudilla"><i class="fa fa-github"></i></a>
+            <a href="https://www.facebook.com/jaren.cudilla/"><i class="fa fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/badongpagong/"><i class="fa fa-instagram"></i></a>
+            <a href="mailto:jarencudilla@gmail.com"><i class="fa fa-envelope"></i></a>
+        </div>
+    </div>
+    <div class="header" id="header">
+        <nav id="nav-bar">
+            <div class="dropdown">
+            <button class="dropbtn">Comics<i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#comics"> Hot</a>
+                    <a href="#comics"> New Releases</a>
+                    <a href="#comics"> Trending</a> 
+                </div>
+            </div>             
+            <div class="dropdown">
+            <button class="dropbtn">Characters<i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#chars">Popular</a>
+                    <a href="#chars">All time favorites</a>
+                    <a href="#chars">Random</a>
+                </div>
+            </div>
+            <div class="favourite-router"><a href="myFaves.html">My Favorites</a></div>                 
+        </nav>
+        </div>
+</header>
+
+<section id="resultcontainer">    
+    <div id="result-container">
+        <div id='results'>
+        </div>
+    </div>
+</section>
+
+    <section id="footer">
+    <div class="footerme" id="myfoot">
+        <div class=footerme>
+                <a href="#top">Xoomvision Gaming</a>
+                <a href="#contact">Contact</a>
+                <a href="#Privacy">Privacy</a>
+                <a href="#TOS">TOS</a>      
+        </div>
+    </div>
+    </section>
+    
+    <script src="./js/myFaves.js"></script>
+    </body>
+    </html>
+</body>
+</html>
