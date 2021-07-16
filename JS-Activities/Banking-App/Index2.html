@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="./js/scripts.js" defer></script>
+
+    <title>BadongPagong's Savings Bank</title>
+</head>
+<body>
+
+<div class="topnav">
+    <a class="active" href="#home">BadongPagong Savings Bank</a>   
+</div>
+
+<h1>BadongPagong Savings Bank</h1>
+<div id="container">
+<button class="active" id="btn-deposit" onclick="#deposit-section">Deposit</button>
+<button class="active" id="btn-withdraw" onclick="#withdrawal-section">Withdrawal</button>
+<button class="active" id="btn-transfer" onclick="#transfer-section" >Transfer</button>
+<button class="active" id="btn-createaccount" onclick="#create-account" >Create New Account</button>
+<button class="active" id="btn-listaccounts" onclick="#client-list">List Accounts</button>
+</div>
+<form id="form" action="/" method="GET"></form>
+
+<main>
+<section id="client-list" hidden>
+  <table>
+    <thead>
+        <tr>
+            <th> Client: </th> <th> Account Number: </th> <th> Balance: </th>   
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+           <td id="username"> Client A </td> <td id="accountno"> 001234567890-01 </td> <td id="currentbalance"> 13862</td>
+        </tr>
+        <tr>
+            <td id="username"> Client B </td> <td id="accountno"> 001234567890-02 </td> <td id="currentbalance"> 1125</td>
+         </tr>
+         <tr>
+            <td id="username"> Client C </td> <td id="accountno"> 001234567890-03 </td> <td id="currentbalance"> 4325</td>
+         </tr>
+
+    </tbody>
+  </table>
+</section>
+
+<section id="deposit-section" hidden>
+    <div>
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" autofocus required>
+    </div>
+    <div>
+        <label for="accountno">Account Number: </label>
+        <input type="text" name="accountno" id="accountno" required>
+    </div>
+    <div>
+        <label for="amount">Amount: </label>
+        <input type="number" name="amount" id="amount" min="0" required>
+    </div>
+    <button type="submit">Submit</button>
+
+</section>
+
+<section id="withdrawal-section" hidden>
+    <div>
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" autofocus required>
+    </div>
+    <div>
+        <label for="accountno">Account Number: </label>
+        <input type="text" name="accountno" id="accountno" required>
+    </div>
+    <div>
+        <label for="amount">Amount: </label>
+        <input type="number" name="amount" id="amount" min="0" required>
+    </div>
+</section>
+
+<section id="transfer-section" hidden>
+    <div>
+        <label for="username">Sender: </label>
+        <input type="text" name="sender" id="sender" autofocus required>
+    </div>
+    <div>
+        <label for="accountno">Account Number: </label>
+        <input type="text" name="saccountno" id="saccountno" required>
+    </div>
+    <div>
+        <label for="username">Recipient: </label>
+        <input type="text" name="recipient" id="recipient" required>
+    </div>
+    <div>
+        <label for="accountno">Account Number: </label>
+        <input type="text" name="raccountno" id="raccountno" required>
+    </div>
+    <div>
+        <label for="amount">Amount: </label>
+        <input type="number" name="amount" id="amount" min="0" required>
+    </div>
+</section>
+
+<section id="create-account" hidden>
+        <h1>Sign up for an account today!</h1>
+    <div>
+        <label for="username">Username: </label>
+        <input type="text" name="username" autofocus required>
+    </div>
+    <div>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required>
+    </div>
+    <div>
+        <label for="password1">Password: </label>
+        <input type="password" name="password1" id="password1" required>
+    </div>
+    <div>
+        <label for="password2">Confirm Password: </label>
+        <input type="password" name="password2" id="password2" required>
+    </div>
+    
+    <button type="submit">Submit</button>
+    Already have an account? <a href="#login-form">Login</a>
+    </form>
+    
+    <div id="show-error">No Errors</div>
+
+<div class="footer">
+    <a href="https://twitter.com/jaren"><i class="fa fa-twitter"></i></a>
+    <a href="https://github.com/jarencudilla"><i class="fa fa-github"></i></a>
+    <a href="https://www.facebook.com/jaren.cudilla/"><i class="fa fa-facebook-square"></i></a>
+    <a href="https://www.instagram.com/badongpagong/"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/channel/UCsAe1ITCyM_x6mAqGjtb9Lg"><i class="fa fa-youtube"></i></a>
+    <a href="mailto:jarencudilla@gmail.com"><i class="fa fa-envelope"></i></a>
+</div> 
+</main>
+</body>
+</html>

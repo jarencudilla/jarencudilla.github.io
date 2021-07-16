@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="./js/scripts.js" defer></script>
+
+    <title>BadongPagong's Savings Bank</title>
+</head>
+<body>
+
+<div class="topnav">
+    <a class="active" href="#home">BPSB Admin Panel</a>
+    <div id="main_button_container">
+        <button class="active" id="btn-deposit" onclick="#deposit-section">Deposit</button>
+        <button class="active" id="btn-withdraw" onclick="#withdrawal-section">Withdrawal</button>
+        <button class="active" id="btn-transfer" onclick="#transfer-section">Transfer</button>
+        <button class="active" id="btn-add_client" onclick="#create-account">Create New Account</button>
+        <button class="active" id="btn-list_accounts" onclick="#client_list">List Accounts</button>
+    </div>   
+</div>
+<main>
+
+<form id="form" action="/" method="GET"></form>
+<section>
+<div class="client_list">
+    <h1>Client List</h1>
+ <div id="table_container">
+  <table id="table">
+    <thead>
+        <tr>
+            <th>Client</th>
+            <th>Username</th>
+            <th>Account Number</th>
+            <th>Balance</th>   
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+  </table>
+ </div>
+</div>
+</section>
+
+<section>
+    <div class="add_client" id="modal_add_client">
+      <div class="add_client_form">
+        <header>
+        <span class="close">X</span>
+      </header>
+      <div class="add_client_container">
+      <h1>Account Number:<span id="acctNo"></span></h1>
+    </div>
+      <form method="post" class="form-container" id='form'>
+        <label for="client_name">Client</label><input type="text" id="client_name" required>
+        <label for="username">Username</label><input type="text" id="username" required=>
+        <label for="balance">Initial Balance</label><input type="number" id="balance" min="100" max="50000" step="100" required>
+      </form>
+      <input type='submit' id='createUser' value='Create' onclick='submitBtn()'/>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+<div class="footer">
+    <a href="https://twitter.com/jaren"><i class="fa fa-twitter"></i></a>
+    <a href="https://github.com/jarencudilla"><i class="fa fa-github"></i></a>
+    <a href="https://www.facebook.com/jaren.cudilla/"><i class="fa fa-facebook-square"></i></a>
+    <a href="https://www.instagram.com/badongpagong/"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/channel/UCsAe1ITCyM_x6mAqGjtb9Lg"><i class="fa fa-youtube"></i></a>
+    <a href="mailto:jarencudilla@gmail.com"><i class="fa fa-envelope"></i></a>
+</div> 
+</main>
+</body>
+</html>

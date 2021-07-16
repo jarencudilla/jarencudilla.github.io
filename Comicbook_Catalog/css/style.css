@@ -5,7 +5,7 @@ html, body {
 
 body html {
   background-color: #0e1111;
-  height: 100%;
+  height: 100vh;
   width: 100vw;
 }
 
@@ -246,7 +246,7 @@ p {
 
 .section {
   width: 100vw;
-  height: auto;
+  height: 70vh;
   margin: 0;
   top: 0;
  }
@@ -266,7 +266,7 @@ p {
     -ms-flex-direction: row;
     flex-direction: row;
     flex-basis: auto;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center ;
     align-items: center;
     min-width: 0;
@@ -384,11 +384,10 @@ input {
   overflow: hidden;
   background-color: #0e1111;
   width: 100vw;
-  height: auto;
+  height: 30px;
 	z-index: 10;
 	left: 0;
 	bottom: 0;
-	/* height: 100px; */
   position: fixed;
 }
 
@@ -524,9 +523,6 @@ input {
   .panel:nth-child(9) {
     flex-basis: 200px;
   }
-  .iframe {
-    width: 250px;
-  }
   /* background colours */
   
   .panel:nth-child(4n+1) {
@@ -545,6 +541,9 @@ input {
     background-image:radial-gradient(circle, lightcoral, tomato);
   }
 
+  .iframe {
+    width: 250px;
+  }
 
   #alert{
     position: absolute;
@@ -571,7 +570,7 @@ input {
 
 #data-container {
   position: relative;
-  margin-top: 200px;
+  margin-top: 50px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -596,7 +595,7 @@ input {
 
 #detail-container{
   position: relative;
-  width: 70%;
+  width: 60%;
 }
 
 .detail-item{
@@ -638,7 +637,7 @@ input {
   background-color: green;
   border-radius: 10px;
   padding: 10px;
-  transition-duration: 600ms;
+  transition-duration: 300ms;
 }
 
 .center {
@@ -651,7 +650,7 @@ input {
   display: flex;
   flex-direction: row;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   margin: 0;
   padding: 0;
   text-align: center;

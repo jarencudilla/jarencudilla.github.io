@@ -1,4 +1,3 @@
-// Commonly used values
 const SHaccess_token = '10223986795873203';
 const SHapi_url = "https://www.superheroapi.com/api.php/"+SHaccess_token+"/";
 
@@ -8,12 +7,12 @@ const notInFaves = './images/red_x_mark.png';
 function getFaves(){
     var faves = JSON.parse(localStorage.getItem('myFaves'));
     if(faves.length==0){
-        document.getElementById('results').innerHTML = "Add your favourite Heroes";
+        document.getElementById('results').innerHTML = "Add your favourite characters";
         return;
     }
     document.getElementById('results').innerHTML = '';
     faves.forEach((id) => {
-        queryHero(id);
+        getInfo(id);
     });
 }
 
@@ -51,6 +50,9 @@ function AlertMe(type, message){
         element[0].style.visibility = "hidden";
     }, 1500);
 }
+
+
+
 
 //async function call api 
 async function getInfo(id){

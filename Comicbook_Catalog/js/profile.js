@@ -75,7 +75,7 @@ function createProfilepage(data){
     image.firstElementChild.src = `${data.image.url}`;
     // var faves = JSON.parse(localStorage.getItem('myFaves'));
     // if(faves.indexOf(data.id) != -1){
-    //     image.lastElementChild.src = InFaves;
+    //     image.nextElementSibling.src = InFaves;
     // }
     // else{
     //     image.lastElementChild.src = notInFaves;
@@ -112,37 +112,3 @@ function formatJSONData(jsonData){
     }
     return str;
 }
-
-// function spotlight(data){
-//     document.getElementById('data-container1').name = data.id;
-//     var image = document.getElementById('image1');
-//     image.firstElementChild.src = `${data.image.url}`;
-//     // var faves = JSON.parse(localStorage.getItem('myFaves'));
-//     // if(faves.indexOf(data.id) != -1){
-//     //     image.lastElementChild.src = InFaves;
-//     // }
-//     // else{
-//     //     image.lastElementChild.src = notInFaves;
-//     // }
-//     var combat = document.getElementsByClassName('combat1');
-//     combat[0].innerHTML = `${data.powerstats.combat}`;
-//     combat[0].style = `width: ${data.powerstats.combat}%;`;
-//     var strength = document.getElementsByClassName('strength1');
-//     strength[0].innerHTML = `${data.powerstats.strength}`;
-//     strength[0].style = `width: ${data.powerstats.strength}%;`;
-//     var power = document.getElementsByClassName('power1');
-//     power[0].innerHTML = `${data.powerstats.power}`;
-//     power[0].style = `width: ${data.powerstats.power}%;`;
-//     var speed = document.getElementsByClassName('speed1');
-//     speed[0].innerHTML = `${data.powerstats.speed}`;
-//     speed[0].style = `width: ${data.powerstats.speed}%;`;
-//     var intelligence = document.getElementsByClassName('intelligence1');
-//     intelligence[0].innerHTML = `${data.powerstats.intelligence}`;
-//     intelligence[0].style = `width: ${data.powerstats.intelligence}%;`;
-//     var durability = document.getElementsByClassName('durability1');
-//     durability[0].innerHTML = `${data.powerstats.durability}`;
-//     durability[0].style = `width: ${data.powerstats.durability}%;`;
-//     document.getElementById('biography1').innerHTML = formatJSONData(data.biography);
-//     document.getElementById('connections1').innerHTML = formatJSONData(data.connections);
-//     document.getElementById('appearance1').innerHTML = formatJSONData(data.appearance);
-// }
