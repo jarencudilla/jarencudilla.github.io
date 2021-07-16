@@ -1,0 +1,103 @@
+body html {
+    background-color: #0e1111;
+    height: 100%;
+    width: 100vw;
+  }
+  
+h1 {
+    font-size: 2.4em;
+    padding-top: 2.5rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+  
+h2 {
+    font-size: 2em;
+    padding-top: 10px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+  
+p {
+    font-size: 1.1em;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #f2f2f2;
+    width: 100vw;
+    height: 3rem;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    align-items: center;
+}
+  
+.topnav a {
+    float: left;
+    display: block;
+    color: #0e1111;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+}
+.active {
+    background-color: #f2f2f2;
+    color: #FF6D10;
+}
+.topnav a:hover {
+    background-color: #f2f2f2;
+    color: #FF6D10;
+} 
+.footer {
+    overflow: hidden;
+    background-color: #f2f2f2;
+    width: 100vw;
+    height: 3rem;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+}
+.footer a {
+    float: right;
+    display: block;
+    color: #0e1111;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+}
+.active {
+    background-color: #f2f2f2;
+    color: #FF6D10;
+}
+.footer a:hover {
+    background-color: #f2f2f2;
+    color: #FF6D10;
+}
+
+table,
+td {
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+#main_button_container {
+    float: right;
+    display: none;
+    color: #0e1111;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+}

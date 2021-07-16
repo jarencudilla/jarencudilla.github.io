@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet"> 
+    <title>superhero Comic Catalog</title>
+</head>
+<body>
+    <header>
+        <div class="topnav" id="myTopnav">
+            <div class=topnav-left>
+                    <a class="active" href="#home">Superhero Comic Catalog</a>
+                    <a href="https://jaren.cudilla.net">News</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">About</a>    
+            </div>
+            <div class=topnav-right>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                    <a href="https://twitter.com/jaren"><i class="fa fa-twitter"></i></a>
+                    <a href="https://github.com/jarencudilla"><i class="fa fa-github"></i></a>
+                    <a href="https://www.facebook.com/jaren.cudilla/"><i class="fa fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/badongpagong/"><i class="fa fa-instagram"></i></a>
+                    <a href="mailto:jarencudilla@gmail.com"><i class="fa fa-envelope"></i></a>
+            </div>
+        </div>
+     
+        <div class="header" id="header">
+            <nav id="nav-bar">
+                <a href="#game" id="header-img"><img src="images/thedivision2_icon3.png" size="250x50px"></a>
+                <div class="dropdown">
+                    <button class="dropbtn">Comics  
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                    <div class="dropdown-content">
+                        <a href="#comics"> Hot</a>
+                        <a href="#comics"> New Releases</a>
+                        <a href="#comics"> Trending</a> 
+                    </div>
+                </div>             
+                 <div class="dropdown">
+                    <button class="dropbtn">Characters  
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="#chars">Popular</a>
+                    <a href="#chars">All time favorites</a>
+                    <a href="#chars">Random</a>
+                    </div>
+                 </div>
+                 <div class="favourite-router center">
+                  <a href="favourites.html">My Favorites</a>
+              </div>                   
+                 </div>
+
+            </nav>
+        </div>
+    </header>
+    <!-- <section id="main-slider-cta">
+        <div class="wrap">
+            <div id="arrow-left" class="arrow"></div>
+            <div id="slider">
+              <div class="slide slide1">
+                <div class="slide-content">
+                    <span><h1>IF WASHINGTON D.C. FALLS,<br>HUMANITY FALLS</h1>All active agents are needed to save the city before it's too late.</span>
+                    <div class="btncontainer">
+                    <a class="btn" href="#lore">Read More</a> <a class="btn1" href="https://www.ubisoft.com/en-gb/game/the-division/the-division-2/buy">Buy Now</a> 
+                   </div>
+                </div>
+    
+              </div>
+              <div class="slide slide2">
+                <div class="slide-content">
+                    <span><h1>WE SURVIVE</h1>Gear up. Save DC. As you progress through levels,<br>join raids, farm mission and control points gain loots and items to upgrade<br>your gear and get powerful skills to help you in your journey</span>
+                    <div class="btncontainer">
+                        <a class="btn" href="#gear">Read More</a> <a class="btn1" href="https://www.ubisoft.com/en-gb/game/the-division/the-division-2/buy">Buy Now</a> 
+                       </div>
+                </div>
+              </div>
+              <div class="slide slide3">
+                <div class="slide-content">
+                  <span><h1>WE FIGHT BACK</h1>Play Solo or with a team as you complete objectives,<br> restore settlements, taking down high value targets,<br> cashing in your bounties, and resolving conflicts.</span>
+                  <div class="btncontainer">
+                    <a class="btn" href="#factions">Read More</a> <a class="btn1" href="https://www.ubisoft.com/en-gb/game/the-division/the-division-2/buy">Buy Now</a> 
+                   </div>
+                </div>
+              </div>
+              <div class="slide slide4">
+                <div class="slide-content">
+                    <span><h1>WE RISE AGAIN</h1>As we take back the city, completing mission and side quests is the key.<br> But don't forget your bounties and manhunts.<br>Also beware of other entities that are out to stop you.</span>
+                    <div class="btncontainer">
+                        <a class="btn" href="#video">Read More</a> <a class="btn1" href="https://www.ubisoft.com/en-gb/game/the-division/the-division-2/buy">Buy Now</a> 
+                    </div>
+                </div>
+              </div>
+            <div id="arrow-right" class="arrow"></div>
+        </div>
+          </div>
+    </section> -->
+
+<section id="searchbar">
+    <div class="search-container center">
+        <input type="text" id="search-data" placeholder="Search for a comicbook character">
+    </div>
+<!-- Notification Alert -->
+<div id="alert" style="visibility:hidden" class="success">Success Message</div>
+<div id="alert" style="visibility:hidden" class="failure">Error Message</div>
+
+<div id="result-container">
+    <div id='results'>
+
+    </div>
+</div>
+
+</section>
+
+    <h1>Recommended Youtube Channels</h1>
+    <section id="gameplayvideos">
+    <div class="card">
+        <!-- <div class="card--video">
+           <div class="card__info">
+            <div class="card__info-video">
+              <iframe width="500" height="315" src="https://www.youtube.com/embed/9KQHWrfYN4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="card__info-desc">
+              <p>Variant Comics : How Powerful is the Winter Soldier</p>
+            </div>
+           </div>
+        </div> -->
+        <div class="card--video">
+            <div class="card__info">
+              <div class="card__info-video">
+                <iframe width="500" height="315" src="https://www.youtube.com/embed/OTV3rIUraMk" title="YouTube video player" frameborder="0"></iframe>
+              </div>
+              <div class="card__info-desc">
+                <p>DC Comics : Superman and Lois Lane - A Love Story<br>DC Secret Files & Origins</p>
+              </div>
+            </div>
+        </div>
+        <div class="card--video">
+            <div class="card__info">
+              <div class="card__info-video">
+                <iframe width="500" height="315" src="https://www.youtube.com/embed/giWIr7U1deA" title="YouTube video player" frameborder="0"></iframe>
+              </div>
+              <div class="card__info-desc">
+                <p>Marvel Entertainment : Marvel Studios’ Shang-Chi <br>and the Legend of the Ten Rings</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <h1>Comic Character of the Week</h1>   
+    <section id="lore">
+     <div class="secbg-bg">
+        <div id='data-container1'>
+
+            <div id="image1">
+                <img width="250" height="250">
+            </div>
+
+            <div id="detail-container">
+                <div class="detail-item">
+
+                    <span class="anchor" id="powerstats"></span>
+                    <h1 id="powerstats">Powerstats</h1>
+                    <div id="stats-container">
+                        <div id="stat-names">
+                            <span>Combat</span>
+                            <span>Durability</span>
+                            <span>Intelligence</span>
+                            <span>Power</span>
+                            <span>Speed</span>
+                            <span>Strength</span>
+                        </div>
+
+                        <div id="stat-bars">
+                            <div class="bar-container">
+                                <div class="bar combat" style="width: 0%;">.</div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar durability" style="width: 0%;">.</div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar intelligence" style="width: 0%;">.</div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar power" style="width: 0%;">.</div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar speed" style="width: 0%;">.</div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar strength" style="width: 0%;">.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <span class="anchor" id="appearance-target"></span>
+                    <h3>Appearance</h3>
+                    <section id="appearance">...</section>
+                </div>
+                <div class="detail-item">
+                    <span class="anchor" id="biography-target"></span>
+                    <h3>Biography</h3>
+                    <section id="biography">...</section>
+                </div>
+                <div class="detail-item">
+                    <span class="anchor" id="occupation-target"></span>
+                    <h3>Occupation</h3>
+                    <section id="occupation">...</section>
+                </div>
+                <div class="detail-item">
+                    <span class="anchor" id="connections-target"></span>
+                    <h3>Connections</h3>
+                    <section id="connections">...</section>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <h1>Trending</h1>
+    <section id="factions">
+      <div class="factioncard">
+        <div class="factionheader">
+          <img src='https://superheroapi.com/api/10219361869334047/70/image'  size="50x50px"> 
+          <h2>Batman</h2>
+        </div>
+        <div class="factioncontainer">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iure sit perspiciatis ea dolore, culpa sed illo odio voluptatem, est alias expedita cupiditate ut tenetur excepturi non nemo mollitia deserunt.</p>
+        </div>
+      </div>
+      <div class="factioncard">
+        <div class="factionheader">
+          <img src="./images/outcasts-logo.png" size="50x50px"> 
+          <h1>Wonder Woman</h1>
+        </div>
+        <div class="factioncontainer">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iure sit perspiciatis ea dolore, culpa sed illo odio voluptatem, est alias expedita cupiditate ut tenetur excepturi non nemo mollitia deserunt.</p>
+        </div>
+      </div>
+      <div class="factioncard">
+        <div class="factionheader">
+          <img src="./images/truesons-logo.png" size="100x100px">
+          <h1>Superman</h1>
+          </div>
+        <div class="factioncontainer"> 
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iure sit perspiciatis ea dolore, culpa sed illo odio voluptatem, est alias expedita cupiditate ut tenetur excepturi non nemo mollitia deserunt.</p>
+        </div>
+        </div>
+        <div class="factioncard">
+            <div class="factionheader">
+              <img src="./images/outcasts-logo.png" size="50x50px"> 
+              <h1>Flash</h1>
+            </div>
+            <div class="factioncontainer">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iure sit perspiciatis ea dolore, culpa sed illo odio voluptatem, est alias expedita cupiditate ut tenetur excepturi non nemo mollitia deserunt.</p>
+            </div>
+        <div class="factioncard">
+          <div class="factionheader">
+          <img src="./images/blacktusks-logo.png" size="50x50px">
+          <h1>Captain America</h1>
+        </div>
+        <div class="factioncontainer">  
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iure sit perspiciatis ea dolore, culpa sed illo odio voluptatem, est alias expedita cupiditate ut tenetur excepturi non nemo mollitia deserunt.</p>
+          </div>
+        </div>
+        <div class="factioncard">
+          <div class="factionheader">
+            <img src="./images/hunters-logo.png" size="50x50px"> 
+            <h1>Spider-Man</h1>
+          </div>
+          <div class="factioncontainer"> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iure sit perspiciatis ea dolore, culpa sed illo odio voluptatem, est alias expedita cupiditate ut tenetur excepturi non nemo mollitia deserunt.</p>
+          </div>
+        </div>
+        <div class="factioncard">
+          <div class="factionheader">
+            <img src="./images/cleaners-logo.png" size="50x50px"> 
+            <h1>Iron man</h1>
+          </div>
+           <div class="factioncontainer">  
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iure sit perspiciatis ea dolore, culpa sed illo odio voluptatem, est alias expedita cupiditate ut tenetur excepturi non nemo mollitia deserunt.</p>
+           </div>
+          </div>
+    </section>
+    <!-- <h1>WEAPONS AND GEAR</h1>
+    <section id="gear">
+    <div class="gearcontainer">
+      <p>
+        Every Agent is equipped with a primary weapon, secondary weapons and a sidearm on their loadouts.
+        Each loadout has 6 pieces of gear which are a mask, a go bag, a holster, and protective gears such as the gloves, knees, and chest protection. Every gear has 3 main stats, Offensive, Defensive and Skills these stats allows the player to be more powerful by matching your current loadout for each specific mission
+      </p>
+      <img src="./images/gear-division2.png" alt="" width="900" >
+    
+    <h2>Brand Sets</h2>
+    <p>Each gear has a brand, if the player equips multiple gear from the same brand (up to 3 items), he will receive a set bonus.</p> 
+    
+    <h2>Gear Sets</h2>
+    <img src="./images/gearsets-division2.png" alt="" width="900" >
+    <p>Apart from Brand Sets, Division Agents have access to Gear Sets which are specialized gear for your loadout, If you want to go Full DPS, A healer or a skill build, these Gear Sets can be custom tailored for your playstyle </p>
+    
+    <h2>Exotics</h2>
+    <img src="./images/exoticgear-division2.png" alt="Exotic Gear" width="800"> <img src="./images/exoticweapon-division2.png" alt="Exotic Weapons" width="800">
+    <p>Occasionally, you come across exotic gears that are more powerful that their regular counterparts.
+      Exotic weapons and gears can be equipped at the same time, but you can't equip an exotic gear type on different slot. IE you can't equip another exotic weapon as your secondary or side arm, if you already have an exotic weapon on your primary weapon slot. 
+    </p> 
+    </div>  
+    </section> -->
+ 
+    <section id="about">
+       <h1>About</h1><p>Hi, I'm Jaren, and I'm a DC/Marvel comic book fan since I was a kid. This site is my vision of my own comic book catalog as my final project for my Software Engineering course, done using HTML/CSS/Javascript.</p>
+       <p> 
+           This site is powered by <a href="https://superheroapi.com/">  Superhero API</a> and <a href="">Comicvine API</a>
+       </p>
+    </section>
+    <section id="form">
+      <form id="survey-form" action="result.html" method="post">
+        <p class="label1"><label id="email-label" for="email">If you want to get the latest news and updates about the game.</label></p>
+        <div class="container">
+        <input type="email" required id="email-label" name="user_email" placeholder="example@email.com"> <button type="subscribe" class="submitbtn" id="submit">Subscribe</a>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h1>Contact Xoomvision Gaming</h1><p>For Collabs and other work related stuff. you can reach me at jarencudilla@gmail.com</p>
+    </section>
+    <section id="footer">
+    <div class="footerme" id="myfoot">
+        <div class=footerme>
+                <a href="#top">Xoomvision Gaming</a>
+                <a href="#contact">Contact</a>
+                <a href="#Privacy">Privacy</a>
+                <a href="#TOS">TOS</a>      
+        </div>
+    </div>
+    </section>
+    
+    <script src="./js/main.js"></script>
+    <script src="./js/profile.js"></script>
+    <script src="./js/comicvine.js"></script>
+    <script src="./js/mediaslider-scripts.js"></script>
+    </body>
+    </html>
+</body>
+</html>
