@@ -6,6 +6,16 @@ function solution(str){
   return str.split("").reverse().join("");
 }
 
+
+//MakeUpperCase
+//Solution:
+
+function makeUpperCase(str) {
+  str = str.toUpperCase();
+  return str;
+}
+
+
 // 7kyu Kata 
 // Descending Order
 
@@ -93,3 +103,37 @@ function makeNegative(num) {
 function makeNegative(num) {
   return -Math.abs(num);
 }
+
+
+// Find the next perfect square!
+// This is a bit trickier, since I'm usually slow when it comes to math, and this problem really requires Math.sqrt() I also see a return -1; so that means I'm going to use a % modulo for the remainder.
+
+function findNextSquare(sq) {
+  // Return the next square if sq is a perfect square, -1 otherwise
+  sq = Math.sqrt(sq);
+  if (var squareroot%sq === 0){
+      squareroot = sq+=1;
+  } else
+  return -1;
+}
+
+// Yup this is wrong, so I had to research what really is a perfect square https://blog.prepscholar.com/list-of-perfect-squares this should give me an idea what to solve for
+// Solution:
+
+function findNextSquare(sq) {
+  // Return the next square if sq is a perfect square, -1 otherwise
+  var squareroot;
+  var newsquareroot;
+    if (Math.sqrt(sq)%1 === 0){ // I changed %sq to %1
+      squareroot = Math.sqrt(sq);
+      newsquareroot = squareroot+=1; //squareroot add it to itself +1,I think newsquareroot and multiply it to itself
+    } else {
+      return -1;
+    }
+return newsquareroot*newsquareroot;
+}
+
+// YES!!! Passed
+
+//6kyu
+
