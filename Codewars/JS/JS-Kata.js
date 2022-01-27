@@ -1,11 +1,9 @@
 //8kyu Kata 
 //Reversed Strings
 
-
 function solution(str){
   return str.split("").reverse().join("");
 }
-
 
 //MakeUpperCase
 //Solution:
@@ -15,6 +13,31 @@ function makeUpperCase(str) {
   return str;
 }
 
+//Returning Strings
+
+function greet(name){
+ return `Hello, ${name} how are you doing today?`
+}
+
+// Grasshopper - summation
+
+// First solution is `num + (num + 1)` thinking it would be 1 + (1+1 = 2) = 3, but nothing happened.
+// `num *= 1` passed for the 1+2 = 3 but failed on 1+2+3+4+5+6+7+8
+
+var summation = function (num) {
+  return num + (num + 1) 
+}
+
+// Final solution
+// safest option for me is to do a loop as long as i <= num, i iterates
+
+var summation = function (num) {
+    let sum = 0;
+    for(let i = 0; i <= num; i++) {
+        sum += i;
+    }
+    return sum;
+}
 
 // 7kyu Kata 
 // Descending Order
@@ -22,7 +45,6 @@ function makeUpperCase(str) {
 //1st solution: missing something with parseint not sure how to make it work
 
 function descendingOrder(n){
-  
   let sortedN = n.tostring();
   let newArr = sortedN.split('');
   let sortArr = newArr.sort();
@@ -104,7 +126,6 @@ function makeNegative(num) {
   return -Math.abs(num);
 }
 
-
 // Find the next perfect square!
 // This is a bit trickier, since I'm usually slow when it comes to math, and this problem really requires Math.sqrt() I also see a return -1; so that means I'm going to use a % modulo for the remainder.
 
@@ -134,6 +155,41 @@ return newsquareroot*newsquareroot;
 }
 
 // YES!!! Passed
+
+// JavaScript Array Filter
+
+// I'm guessing for this problem I need to use the `filter()` method to filter out the even numbers from the odd ones
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+// I was initially thinking of a for statement `for (var i = 0; i < numbersArray.length; i++)` then push the filtered stuff back to `numbersArray`
+// Initially I thought `.filter()` needs to return a boolean
+
+// `x % 2 == 1` filters all even numbers and leaves odd numbers 
+// `x % 2 == 0` filters all odd numbers and leaves even numbers
+
+// My solution: 
+
+function getEvenNumbers(numbersArray){
+var even = numbersArray.filter(x => x % 2 == 0);
+return(even);
+ }
+
+//Vowel Count
+
+//Made use of the `For - of` https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
+//Also made use of `includes()`https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
+//to compare the string from my vowel list if it vowels appear or not.
+ 
+
+function getCount(str) {
+  var vowelsCount = 0;
+  let vowels = ["a","e","i","o","u"];  
+  for (let x of str) {
+    if (vowels.includes(x)) vowelsCount++;
+  }
+  return vowelsCount;
+}
+
 
 //6kyu
 
