@@ -120,7 +120,7 @@ function makeNegative(num) {
   return Math.abs(num) * -1;
 }
 
-// My updated solution is 
+// My updated solution is
 
 function makeNegative(num) {
   return -Math.abs(num);
@@ -164,10 +164,10 @@ return newsquareroot*newsquareroot;
 // I was initially thinking of a for statement `for (var i = 0; i < numbersArray.length; i++)` then push the filtered stuff back to `numbersArray`
 // Initially I thought `.filter()` needs to return a boolean
 
-// `x % 2 == 1` filters all even numbers and leaves odd numbers 
+// `x % 2 == 1` filters all even numbers and leaves odd numbers
 // `x % 2 == 0` filters all odd numbers and leaves even numbers
 
-// My solution: 
+// My solution:
 
 function getEvenNumbers(numbersArray){
 var even = numbersArray.filter(x => x % 2 == 0);
@@ -179,17 +179,70 @@ return(even);
 //Made use of the `For - of` https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
 //Also made use of `includes()`https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 //to compare the string from my vowel list if it vowels appear or not.
- 
 
 function getCount(str) {
   var vowelsCount = 0;
-  let vowels = ["a","e","i","o","u"];  
+  let vowels = ["a","e","i","o","u"];
   for (let x of str) {
     if (vowels.includes(x)) vowelsCount++;
   }
   return vowelsCount;
 }
 
+// 7 Kyu
+// Regex validate PIN code
+
+function validatePIN (pin) {
+  //return true or false
+  if (pin.length === 4 && pin.length === 6){
+    return pin = true
+} else
+  return pin = false
+}
+
+// Passed for detecting 4 and 6 digits but failed because it doesn't check if it's a number or a letter since I used .length My thoughts: after checking digits that are 4 and 6 in length I should have another check to check if there just digits or alphanumeric - this can be achieved using regex.
+
+// Added regex to my "pin check"
+
+function validatePIN (pin) {
+//   return true or false
+  if (pin.length === 4 && pin.length === 6){
+   return /^(\d{4}|\d{6})$/.test(pin);
+  } else
+  return false
+}
+
+// Used Regex101 -- https://regex101.com/r/Rahwz8/1 /^(\d{4}|\d{6})$/ ^ asserts position at start of the string
+// 1st Capturing Group (\d{4}|\d{6})
+// 1st Alternative \d{4}\d matches a digit (equivalent to [0-9]) {4} matches the previous token exactly 4 times
+// 2nd Alternative \d{6}\d matches a digit (equivalent to [0-9]) {6} matches the previous token exactly 6 times
+// $ asserts position at the end of the string, or before the line terminator right at the end of the string (if any)
+
+// Still failed, as an experiment I returned my regex filter /^(\d{4}|\d{6})$/.test(pin) and it passed
+// Solution
+
+function validatePIN(pin) {
+  return /^(\d{4}|\d{6})$/.test(pin)
+}
+
+// 7 Kyu
+// Opposites Attract
+
+// Initial thoughts is to check if it's odd or even. But after double checking the instruction One has to be even and the other one has to be odd. Will use a % modulo to check the remainder.
+
+// So it should be
+
+// flower1 % 2 = 0  
+// flower % 2 = 1  
+
+// Or I should use !== not equal to
+
+// flower1 % 2 !== flower2 % 2
+// Solution
+
+function lovefunc(flower1, flower2){
+  return flower1 % 2 !== flower2 % 2;
+}
+
 
 //6kyu
-
