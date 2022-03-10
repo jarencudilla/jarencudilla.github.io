@@ -1,100 +1,17 @@
 //8kyu Kata 
-//Reversed Strings
-
-function solution(str){
-  return str.split("").reverse().join("");
-}
-
-//MakeUpperCase
-//Solution:
-
-function makeUpperCase(str) {
-  str = str.toUpperCase();
-  return str;
-}
-
-//Returning Strings
-
-function greet(name){
- return `Hello, ${name} how are you doing today?`
-}
-
-// Grasshopper - summation
-
-// First solution is `num + (num + 1)` thinking it would be 1 + (1+1 = 2) = 3, but nothing happened.
-// `num *= 1` passed for the 1+2 = 3 but failed on 1+2+3+4+5+6+7+8
-
-var summation = function (num) {
-  return num + (num + 1) 
-}
-
-// Final solution
-// safest option for me is to do a loop as long as i <= num, i iterates
-
-var summation = function (num) {
-    let sum = 0;
-    for(let i = 0; i <= num; i++) {
-        sum += i;
-    }
-    return sum;
-}
-
-// 8 Kyu
-// Calculate average
-
-// To calculate for the average I need to add everything in the array then divide the total from the length of the array. At first I thought it would just be a straight Math.avg() I've also seen solutions with reduce(), though it may produce a shorter code but I'm still not familiar. The shorter code, is not all the time the optimized code.
-
-// Solution:
-
-function find_average(array) {
-  var avg = 0; 
-  for (var i = 0; i < array.length; i++) {
-  avg = avg + array[i];
-    }
-    return avg / array.length;
-}
-
-// Test failed for array with 0 length
-
-// Solution using reduce()
-
-function find_average(array) {
-  return array.reduce((a, b) => a + b) / array.length;
-}
-
-// Test also failed for empty arrays Finally found a solution to an empty array! after checking if it's an array or not if it's empty or not I created a new array with [0] value
-
-if (array === undefined || array.length == 0 || array.length === 0 || array.length === NaN || !array)
-    array = [0];
-
-// Fun times!
-
-// Real solution :
-
-function find_average(array) {
-  if (array === undefined || array.length == 0 || array.length === 0 || array.length === NaN || !array)
-  array = [0];
-  var avg = 0; 
-  for (var i = 0; i < array.length; i++) {
-  avg = avg + array[i];
-    }
-    return avg / array.length;
-}
-
-// 8 Kyu
-// Find Maximum and Minimum Values of a List
+//Find Maximum and Minimum Values of a List
 
 // Since the purpose is to find out the Max and Min value of "list", I used a spread operator https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax so it can check everything in list without having to guess the length of the array.
 
 // Solution:
 
 var min = function(list){
-    
+
     return Math.min(...list);
 }
 
 var max = function(list){
-    
+
     return Math.max(...list);
 }
 
