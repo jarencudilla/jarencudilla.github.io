@@ -20,7 +20,7 @@ body {
   font-weight: 300;
   cursor: none;
   overflow-x: hidden;
-  min-height: 100vh;
+  min-height: calc(100vh - 120px);
 }
 
 body::after {
@@ -80,9 +80,9 @@ header {
 
 .h-badge {
   flex-shrink: 0;
-  width: clamp(500px, 45vw, 999px);
-  height: clamp(500px, 45vw, 999px);
-  margin-right: -60px;
+  width: clamp(360px, 35vw, 999px);
+  height: clamp(360px, 35vw, 999px);
+  margin-right: -40px;
 }
 
 .h-badge svg {
