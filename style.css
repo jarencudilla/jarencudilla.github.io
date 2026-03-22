@@ -80,8 +80,9 @@ header {
 
 .h-badge {
   flex-shrink: 0;
-  width: 180px;
-  height: 180px;
+  width: clamp(500px, 45vw, 999px);
+  height: clamp(500px, 45vw, 999px);
+  margin-right: -60px;
 }
 
 .h-badge svg {
@@ -89,8 +90,6 @@ header {
   height: 100%;
 }
 
-.h-badge { flex-shrink:0; width:170px; height:170px; }
-.h-badge svg { width:100%; height:100%; }
 .h-right { flex:1; }
 
 h1 {
